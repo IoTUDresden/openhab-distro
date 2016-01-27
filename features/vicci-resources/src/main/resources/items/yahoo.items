@@ -1,0 +1,1 @@
+Number dd_weather "Wetter Dresden" (NU_Weather) {channel="yahooweather:weather:dresden:temperature"}
