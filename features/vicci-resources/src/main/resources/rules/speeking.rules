@@ -1,0 +1,6 @@
+rule "Say Something"
+	when
+		Item Say_Text received command
+	then
+		say("Hello")
+end
