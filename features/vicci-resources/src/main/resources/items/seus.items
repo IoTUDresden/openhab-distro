@@ -2,7 +2,7 @@ Switch Health_Button "Health" (NU_Button)
 
 String Say_Text "Say Text" (NU_Button)
 
-String Current_Location "Current Location" (NU_Button)
+String dummy_current_location_1 "Current Location" (NU_Button)
 
 
 /*Color Light (CS_Hue) { channel="hue:LCT001:first:bulb1:color"}*/

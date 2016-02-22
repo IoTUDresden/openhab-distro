@@ -1,1 +1,4 @@
-Number dd_weather "Wetter Dresden" (NU_Weather) {channel="yahooweather:weather:dresden:temperature"}
+Number yahooweather_weather_temperature_dresden "Wetter Dresden" (NU_Weather) {channel="yahooweather:weather:dresden:temperature"}
+Number yahooweather_weather_humidity_dresden "Feuchtigkeit Dresden" (NU_Weather) {channel="yahooweather:weather:dresden:humidity"}
+
+Number yahooweather_weather_temperature_berlin "Wetter Berlin" (NU_Weather) {channel="yahooweather:weather:berlin:temperature"}  
