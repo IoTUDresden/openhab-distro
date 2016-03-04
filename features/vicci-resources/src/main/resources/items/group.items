@@ -9,6 +9,12 @@ Group CS_Tinkerforge_Lcd "Tinkerforge 20x4 LCD 1" (CustomStuff)
 Group CS_Tinkerforge_2 "Tinkerforge Brick 2" (CustomStuff)
 Group CS_Tinkerforge_Lcd_2 "Tinkerforge 20x4 LCD 2" (CustomStuff)
 
+Group CS_Tinkerforge_3 "Tinkerforge Brick 3" (CustomStuff)
+Group CS_Tinkerforge_Lcd_3 "Tinkerforge 20x4 LCD 3" (CustomStuff)
+
+Group CS_Tinkerforge_4 "Tinkerforge Brick 4" (CustomStuff)
+Group CS_Tinkerforge_Lcd_4 "Tinkerforge 20x4 LCD 4" (CustomStuff)
+
 /* Homematic */
 /*Group CS_Homematic "Homematic" (CustomStuff)*/
 

@@ -22,4 +22,4 @@ Switch homematic_keymatic_keymatic_1 			"Verschließen [map(HM-Sec-Key-S.map):%s
 Switch Keymatic_Open_1 		"Öffnen" 		(CS_Keymatic_1) { homematic="address=JEQ0710776, forceUpdate=true, channel=1, parameter=OPEN", autoUpdate="false" }
 
 /* C02 Sensor*/
-String homematic_co2_co2_1 "CO2 Gehalt [map(HM-CC-SCD.map):%s]" (CS_C02_1) {homematic="address=TODO, channel=1, parameter=STATE" }
+String homematic_co2_co2_1 "CO2 Gehalt [map(HM-CC-SCD.map):%s]" (CS_C02_1) {homematic="address=HEQ0083942, channel=1, parameter=STATE" }
