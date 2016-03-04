@@ -30,6 +30,9 @@ Group CS_Homematic_Window_1 "Fenster 1" (CustomStuff)
 /* Keymatic */
 Group CS_Keymatic_1 "Tür 1" (CustomStuff)
 
+/* C02 */
+Group CS_C02_1 "CO2 Sensor" (CustomStuff)
+
 /* Fingerscanner */
 Group CS_Fingerscan "Fingerprint Reader" (CustomStuff)
 
