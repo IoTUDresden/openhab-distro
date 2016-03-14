@@ -1,6 +1,6 @@
 
 /* Brick Kaffee*/
-Number homematic_humidity_humidity_1 		"Humidity [%.1f %%]" 		(CS_Tinkerforge) { tinkerforge="uid=deb" }
+Number tinkerforge_humidity_humidity_1 		"Humidity [%.1f %%]" 		(CS_Tinkerforge) { tinkerforge="uid=deb" }
 Number tinkerforge_ambientLight_ambientLight_1	"Luminance [%.1f Lux]" 		(CS_Tinkerforge) { tinkerforge="uid=equ" }
 Number tinkerforge_barometer_barometer_1     "Air Pressure [%.1f mbar]" 	(CS_Tinkerforge) { tinkerforge="uid=euq" }
 
@@ -26,7 +26,7 @@ Number LinearPoti "Linear Poti [%.0f]" 	(CS_Tinkerforge_2) 	{ tinkerforge="uid=8
 Number tinkerforge_ambientLight_ambientLight_2	"Luminance [%.1f Lux]" 		(CS_Tinkerforge_2) { tinkerforge="uid=b43" }
 
 /*Brick 3 (fenster)*/
-Number homematic_humidity_humidity_3        "Humidity [%.1f %%]"        (CS_Tinkerforge_3) { tinkerforge="uid=ddc" }
+Number tinkerforge_humidity_humidity_3        "Humidity [%.1f %%]"        (CS_Tinkerforge_3) { tinkerforge="uid=ddc" }
 Number tinkerforge_ambientLight_ambientLight_3  "Luminance [%.1f Lux]"      (CS_Tinkerforge_3) { tinkerforge="uid=eqq" }
 Number tinkerforge_barometer_barometer_3     "Air Pressure [%.1f mbar]"     (CS_Tinkerforge_3) { tinkerforge="uid=euy" }
 
@@ -38,7 +38,7 @@ Switch Button1_3         "Button1 3"        (CS_Tinkerforge_Lcd_3)  { tinkerforg
 Switch Button2_3         "Button2 3"        (CS_Tinkerforge_Lcd_3)  { tinkerforge="uid=ezf, subid=button2"}
 
 /*Brick 4 (tisch)*/
-Number homematic_humidity_humidity_4        "Humidity [%.1f %%]"        (CS_Tinkerforge_4) { tinkerforge="uid=dcW" }
+Number tinkerforge_humidity_humidity_4        "Humidity [%.1f %%]"        (CS_Tinkerforge_4) { tinkerforge="uid=dcW" }
 Number tinkerforge_ambientLight_ambientLight_4  "Luminance [%.1f Lux]"      (CS_Tinkerforge_4) { tinkerforge="uid=eqo" }
 Number tinkerforge_barometer_barometer_4     "Air Pressure [%.1f mbar]"     (CS_Tinkerforge_4) { tinkerforge="uid=et1" }
 
