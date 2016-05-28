@@ -14,72 +14,31 @@
     <name>openHAB Online Distribution</name>
     <description>This is the online distribution of openHAB</description>
 
+    <properties>
+        <deb.name>openhab2-online</deb.name>
+        <deb.srcarchive>openhab-online-${project.version}.tar.gz</deb.srcarchive>
+        <deb.conflicts>openhab2-offline</deb.conflicts>
+    </properties>
+
+
     <dependencies>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>framework</artifactId>
-            <version>${karaf.features.version}</version>
+            <version>${karaf.version}</version>
             <type>kar</type>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>standard</artifactId>
-            <version>${karaf.features.version}</version>
+            <version>${karaf.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.smarthome</groupId>
-            <artifactId>karaf</artifactId>
-            <version>${esh.version}</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>de.maggu2810.shk</groupId>
-            <artifactId>shk-feature-base</artifactId>
-            <version>${shk.version}</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openhab.core</groupId>
-            <artifactId>openhab-core</artifactId>
-            <version>${ohc.version}</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openhab.addons</groupId>
-            <artifactId>openhab2-addons</artifactId>
-            <version>${oh2.version}</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openhab.addons</groupId>
-            <artifactId>openhab-addons</artifactId>
-            <version>${oh1.version}</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>openhab-esh-addons</artifactId>
-            <version>${project.version}</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>openhab-demo</artifactId>
+            <groupId>org.openhab.distro</groupId>
+            <artifactId>openhab-aggregate-xml</artifactId>
             <version>${project.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
@@ -87,16 +46,16 @@
         </dependency>
         <!-- Temporary patch for https://github.com/openhab/openhab-distro/issues/10 -->
         <dependency>
-          	<groupId>org.openhab.distro.deps</groupId>
-  			<artifactId>pax-web-jetty</artifactId>
-  			<version>4.2.3.sp1</version>
-			<scope>provided</scope>
-  		</dependency>         
+            <groupId>org.openhab.distro.deps</groupId>
+            <artifactId>pax-web-jetty</artifactId>
+            <version>4.2.4</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <resources>
-        	<!-- add shared distribution resources -->
+            <!-- add shared distribution resources -->
             <resource>
                 <directory>../distribution-resources/src/main/resources</directory>
                 <filtering>false</filtering>
@@ -111,7 +70,7 @@
                     <include>**/*</include>
                 </includes>
             </resource>
-        	<!-- add distribution specific resources -->
+            <!-- add distribution specific resources -->
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>false</filtering>
@@ -125,7 +84,7 @@
                 <includes>
                     <include>**/*</include>
                 </includes>
-            </resource>            
+            </resource>
         </resources>
         <plugins>
             <plugin>
@@ -189,6 +148,23 @@
                             <appendAssemblyId>false</appendAssemblyId>
                             <tarLongFileMode>gnu</tarLongFileMode>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>jdeb</artifactId>
+                <groupId>org.vafer</groupId>
+            </plugin>
+            <plugin>
+                <artifactId>apt-repo</artifactId>
+                <groupId>org.m1theo</groupId>
+                <version>0.2.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>apt-repo</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>

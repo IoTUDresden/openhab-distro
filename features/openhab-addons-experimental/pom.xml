@@ -9,11 +9,12 @@
         <version>2.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>openhab-esh-addons</artifactId>
+    <groupId>org.openhab.addons</groupId>
+    <artifactId>openhab-addons-experimental</artifactId>
     <packaging>feature</packaging>
 
-    <name>openHAB Feature ESH Addons</name>
-    <description>openHAB Feature ESH Addons</description>
+    <name>openHAB Experimental Feature Addons</name>
+    <description>openHAB Experimental Addons</description>
 
     <build>
         <plugins>

@@ -18,13 +18,21 @@
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>framework</artifactId>
-            <version>${dep.karaf.version}</version>
+            <version>${karaf.version}</version>
             <type>kar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>openhab-aggregate-xml</artifactId>
+            <version>${project.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openhab.addons</groupId>
+            <artifactId>openhab-addons-experimental</artifactId>
             <version>${project.version}</version>
             <type>xml</type>
             <classifier>features</classifier>
@@ -46,9 +54,10 @@
                         </goals>
                         <configuration>
                             <descriptors>
-                                <descriptor>mvn:org.apache.karaf.features/framework/${dep.karaf.version}/xml/features</descriptor>
-                                <descriptor>mvn:org.apache.karaf.features/standard/${dep.karaf.version}/xml/features</descriptor>
+                                <descriptor>mvn:org.apache.karaf.features/framework/${karaf.version}/xml/features</descriptor>
+                                <descriptor>mvn:org.apache.karaf.features/standard/${karaf.version}/xml/features</descriptor>
                                 <descriptor>mvn:${project.groupId}/openhab-aggregate-xml/${project.version}/xml/features</descriptor>
+                                <descriptor>mvn:org.openhab.addons/openhab-addons-experimental/${project.version}/xml/features</descriptor>
                             </descriptors>
                             <distribution>org.apache.karaf.features:framework</distribution>
                             <javase>1.8</javase>

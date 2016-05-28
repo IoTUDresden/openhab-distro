@@ -14,17 +14,24 @@
     <name>openHAB Offline Distribution</name>
     <description>This is an offline distribution of openHAB</description>
 
+    <properties>
+        <deb.name>openhab2-offline</deb.name>
+        <deb.srcarchive>openhab-offline-${project.version}.tar.gz</deb.srcarchive>
+        <deb.conflicts>openhab2-online</deb.conflicts>
+    </properties>
+
+
     <dependencies>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>framework</artifactId>
-            <version>${karaf.features.version}</version>
+            <version>${karaf.version}</version>
             <type>kar</type>
         </dependency>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>standard</artifactId>
-            <version>${karaf.features.version}</version>
+            <version>${karaf.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
         </dependency>
@@ -45,11 +52,11 @@
         </dependency>
         <!-- Temporary patch for https://github.com/openhab/openhab-distro/issues/10 -->
         <dependency>
-          	<groupId>org.openhab.distro.deps</groupId>
-  			<artifactId>pax-web-jetty</artifactId>
-  			<version>4.2.3.sp1</version>
-			<scope>provided</scope>
-  		</dependency>
+            <groupId>org.openhab.distro.deps</groupId>
+            <artifactId>pax-web-jetty</artifactId>
+            <version>4.2.4</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -151,7 +158,23 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <artifactId>jdeb</artifactId>
+                <groupId>org.vafer</groupId>
+            </plugin>
+            <plugin>
+                <artifactId>apt-repo</artifactId>
+                <groupId>org.m1theo</groupId>
+                <version>0.2.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>apt-repo</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
-    </build>
-
+      </build>
 </project>

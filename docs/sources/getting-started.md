@@ -14,13 +14,13 @@ You will find the following folders:
  
 ## Choosing a Base Package and Add-ons to be Installed 
 
-If you do not do any changes to the distribution, it will by default install a demo package, which consists out of demo configuration file (for items, sitemaps, etc.) and a selection of add-ons and UIs.
+If you do not do any changes to the distribution, it will by default install a standard package, which comes with the most common UIs.
 
-If you do not want the demo package, you should directly edit the file 'conf/services/addons.cfg'.
+If you are starting and want the demo package, which consists out of demo configuration files (for items, sitemaps, etc.) and a selection of add-ons and UIs, you should directly edit the file 'conf/services/addons.cfg'.
 It allows you to choose a base package and any add-on that you might want to install. Note that all required dependencies (e.g. io.transport bundles) will automatically be installed, so you do not need to worry about this anymore. You also do not have to get hold of the jar file yourself as the openHAB distribution either includes it already locally (offline distro) or knows from where to download it (online distro).
 
 ```
-# The base installation package of this openHAB instance
+# The base installation package of this openHAB instance (default is "standard")
 # Valid options:
 #   - minimal  : Installation only with dashboard, but no UIs or other addons
 #   - standard : Typical installation with all standards UIs
@@ -42,8 +42,8 @@ action =
 # A comma-separated list of transformation services to install (e.g. "map,jsonpath")
 transformation = map
 
-# A comma-separated list of text-to-speech engines to install (e.g. "marytts,freetts")
-tts =
+# A comma-separated list of voice services to install (e.g. "marytts,freetts")
+voice =
 
 # A comma-separated list of miscellaneous services to install (e.g. "myopenhab")
 misc = myopenhab
@@ -113,6 +113,12 @@ openhab:install-service
 ```
 in the shell and make sure that the folder `<openhab root folder>/runtime/karaf` is writable (only required at this time, you can make it read-only again afterwards).
 The files are then generated for you and a short guide is displayed on what further actions you need to take to register it as a system service.
+
+After starting openhab as a service, you can still access the openHAB shell using ssh, by calling
+```
+ssh -p 8101 karaf@localhost
+```
+with the default password 'karaf'.
 
 ### Raspberry Pi
 
