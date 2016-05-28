@@ -22,3 +22,6 @@ distribution/openhabhome/userdata/mapdb/storage.mapdb.t
 maven-metadata-local.xml
 launch/home/logs
 launch/home/userdata
+
+/*Semantic stuff*/
+launch/home/semantic/tdb
