@@ -5,3 +5,5 @@ kodi:kodicontrol:firstinstance [ip="http://192.168.1.9:8080", displaytime=5000, 
 fingerscanner:identify:firstinstance
 
 libnfcwrapper:idscan:firstinstance
+
+viccirobot:robot:turtlebot1 [robotType="turtlebot", robotHost="http://192.168.1.15", robotPort=9090]

@@ -1,0 +1,5 @@
+String viccirobot_robot_setCurrentLocation_1 "Current Location" (R_Turtle) {channel="viccirobot:robot:turtlebot1:setCurrentLocation"}
+
+String viccirobot_robot_moveToLocation_1 "Move to" (R_Turtle) {channel="viccirobot:robot:turtlebot1:moveToLocation"}
+
+String viccirobot_robot_movementState_1 "Movement State" (R_Turtle) {channel="viccirobot:robot:turtlebot1:movementState"}
