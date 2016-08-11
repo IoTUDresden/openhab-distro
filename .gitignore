@@ -25,3 +25,7 @@ launch/home/userdata
 
 /*Semantic stuff*/
 launch/home/semantic/tdb
+launch/home/selectTime
+
+/* custom binding stuff */
+launch/home/fingerprints.db

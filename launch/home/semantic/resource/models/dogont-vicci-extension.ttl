@@ -1,0 +1,44 @@
+# baseURI: http://openhab-semantic/0.1/dogont-vicci-extension
+# imports: http://elite.polito.it/ontologies/dogont.owl
+# prefix: vicci
+
+@prefix dogont: <http://elite.polito.it/ontologies/dogont.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vicci: <http://openhab-semantic/0.1/dogont-vicci-extension#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://openhab-semantic/0.1/dogont-vicci-extension>
+  rdf:type owl:Ontology ;
+  owl:imports <http://elite.polito.it/ontologies/dogont.owl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+vicci:POI
+  rdf:type owl:Class ;
+  rdfs:comment "Point of Interest is a helper, to locate the position of items"^^xsd:string ;
+  rdfs:subClassOf dogont:BuildingEnvironment ;
+.
+vicci:RobotPosition
+  rdf:type owl:Class ;
+  rdfs:comment "The position of a vicci robot"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+vicci:hasOrientation
+  rdf:type owl:FunctionalProperty ;
+  rdfs:domain vicci:RobotPosition ;
+  rdfs:range xsd:string ;
+.
+vicci:hasPosition
+  rdf:type owl:FunctionalProperty ;
+  rdfs:domain vicci:RobotPosition ;
+  rdfs:range xsd:string ;
+.
+vicci:hasRobotPosition
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "Gives the location for a vicci robot (position + orientation)"^^xsd:string ;
+  rdfs:domain dogont:BuildingEnvironment ;
+  rdfs:domain dogont:BuildingThing ;
+  rdfs:domain vicci:POI ;
+  rdfs:range vicci:RobotPosition ;
+.
