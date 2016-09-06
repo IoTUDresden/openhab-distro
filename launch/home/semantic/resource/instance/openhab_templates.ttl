@@ -1,5 +1,6 @@
 # baseURI: http://openhab-semantic/0.1/template
 # imports: http://elite.polito.it/ontologies/dogont.owl
+# imports: http://openhab-semantic/0.1/dogont-vicci-extension
 # prefix: template
 
 @prefix dogont: <http://elite.polito.it/ontologies/dogont.owl#> .
@@ -7,6 +8,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix template: <http://openhab-semantic/0.1/template#> .
+@prefix vicci: <http://openhab-semantic/0.1/dogont-vicci-extension#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dogont:State_fingerscanner_identify_c6faf529_channel_person
@@ -16,7 +18,11 @@ dogont:State_fingerscanner_identify_c6faf529_channel_person
 <http://openhab-semantic/0.1/template>
   rdf:type owl:Ontology ;
   owl:imports <http://elite.polito.it/ontologies/dogont.owl> ;
+  owl:imports <http://openhab-semantic/0.1/dogont-vicci-extension> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+template:BloodOxygenSaturationStateValue_1
+  rdf:type vicci:BloodOxygenSaturationStateValue ;
 .
 template:DisplayCommand_OpenHab
   rdf:type dogont:DisplayCommand ;
@@ -187,6 +193,20 @@ template:State_libnfcwrapper_idscan_idscanResultChannel
       dogont:realStateValue "unknown"^^xsd:string ;
     ] ;
 .
+template:State_proteus_healthMonitor_heartRate
+  rdf:type vicci:HeartRateMeasurementState ;
+  dogont:hasStateValue [
+      rdf:type vicci:HeartRateStateValue ;
+      dogont:realStateValue "0"^^xsd:string ;
+    ] ;
+.
+template:State_proteus_healthMonitor_oxygenSaturation
+  rdf:type vicci:BloodOxygenSaturationMeasurementState ;
+  dogont:hasStateValue [
+      rdf:type vicci:BloodOxygenSaturationStateValue ;
+      dogont:realStateValue "0"^^xsd:string ;
+    ] ;
+.
 template:State_tinkerforge_ambientLight_ambientLight
   rdf:type dogont:LightIntensityState ;
   dogont:hasStateValue [
@@ -307,6 +327,11 @@ template:Thing_kodi_kodicontrol
 template:Thing_libnfcwrapper_idscan
   rdf:type dogont:AccessControlSystem ;
   dogont:hasState template:State_libnfcwrapper_idscan_idscanResultChannel ;
+.
+template:Thing_proteus_healthMonitor
+  rdf:type vicci:HealthMonitor ;
+  dogont:hasState template:State_proteus_healthMonitor_heartRate ;
+  dogont:hasState template:State_proteus_healthMonitor_oxygenSaturation ;
 .
 template:Thing_tinkerforge_ambientLight
   rdf:type dogont:LightSensor ;
