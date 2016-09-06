@@ -2,6 +2,7 @@
 # imports: http://elite.polito.it/ontologies/dogont.owl
 # prefix: vicci
 
+@prefix : <http://openhab-semantic/0.1/dogont-vicci-extension#> .
 @prefix dogont: <http://elite.polito.it/ontologies/dogont.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,31 +15,110 @@
   owl:imports <http://elite.polito.it/ontologies/dogont.owl> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
+vicci:Health
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:Controllable ;
+.
+vicci:HealthMonitor
+  rdf:type owl:Class ;
+  rdfs:subClassOf vicci:Health ;
+.
+vicci:HeartRateMeasurementState
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:ContinuousState ;
+.
+vicci:HeartRateMeasuringFunctionality
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:ContinuousControlFunctionality ;
+.
+vicci:HeartRateStateValue
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:ContinuousValue ;
+.
 vicci:POI
   rdf:type owl:Class ;
   rdfs:comment "Point of Interest is a helper, to locate the position of items"^^xsd:string ;
   rdfs:subClassOf dogont:BuildingEnvironment ;
+.
+vicci:Person
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:Controllable ;
 .
 vicci:RobotPosition
   rdf:type owl:Class ;
   rdfs:comment "The position of a vicci robot"^^xsd:string ;
   rdfs:subClassOf owl:Thing ;
 .
+vicci:hasFirstname
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:Person
+        ) ;
+    ] ;
+  rdfs:range xsd:string ;
+.
+vicci:hasLastname
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:Person
+        ) ;
+    ] ;
+  rdfs:range xsd:string ;
+.
+vicci:hasAge
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:Person
+        ) ;
+    ] ;
+  rdfs:range xsd:string ;
+.
+vicci:hasGender
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:Person
+        ) ;
+    ] ;
+  rdfs:range xsd:string ;
+.
 vicci:hasOrientation
   rdf:type owl:FunctionalProperty ;
-  rdfs:domain vicci:RobotPosition ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:RobotPosition
+        ) ;
+    ] ;
   rdfs:range xsd:string ;
 .
 vicci:hasPosition
   rdf:type owl:FunctionalProperty ;
-  rdfs:domain vicci:RobotPosition ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:RobotPosition
+        ) ;
+    ] ;
   rdfs:range xsd:string ;
 .
 vicci:hasRobotPosition
   rdf:type owl:FunctionalProperty ;
   rdfs:comment "Gives the location for a vicci robot (position + orientation)"^^xsd:string ;
-  rdfs:domain dogont:BuildingEnvironment ;
-  rdfs:domain dogont:BuildingThing ;
-  rdfs:domain vicci:POI ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dogont:BuildingThing
+          dogont:BuildingEnvironment
+          vicci:POI
+        ) ;
+    ] ;
   rdfs:range vicci:RobotPosition ;
 .
