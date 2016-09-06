@@ -3,6 +3,7 @@ Group NotUsed "hidden" ["home-group"]
 Group NeedInet "needs inet" ["home-group"]
 Group Robot "Robots" ["home-group"]
 Group Health "Health" ["home-group"]
+Group Person "Person" ["home-group"]
 
 /* Tinkerforge */
 Group CS_Tinkerforge "Tinkerforge Brick 1" (CustomStuff)
@@ -63,4 +64,8 @@ Group R_Turtle "Turtlebot" (Robot)
 /* Health */
 Group Health_Steffen "Health Steffen" (Health)
 Group Health_Ronny "Health Ronny" (Health)
+
+/* Persons */
+Group Person_Steffen "Person Steffen" (Person)
+Group Person_Ronny "Person Ronny" (Person)
 

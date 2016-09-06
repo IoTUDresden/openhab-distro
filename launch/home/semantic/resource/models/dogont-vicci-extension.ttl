@@ -15,6 +15,26 @@
   owl:imports <http://elite.polito.it/ontologies/dogont.owl> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
+vicci:AvailabilityState
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:DiscreteState ;
+.
+vicci:AvailabilityStateValue
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:DiscreteValue ;
+.
+vicci:BloodOxygenSaturationMeasurementState
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:ContinuousState ;
+.
+vicci:BloodOxygenSaturationMeasuringFunctionality
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:ContinuousControlFunctionality ;
+.
+vicci:BloodOxygenSaturationStateValue
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:ContinuousValue ;
+.
 vicci:Health
   rdf:type owl:Class ;
   rdfs:subClassOf dogont:Controllable ;
@@ -42,32 +62,20 @@ vicci:POI
 .
 vicci:Person
   rdf:type owl:Class ;
+  rdfs:subClassOf vicci:ProteusThings ;
+.
+vicci:ProteusThings
+  rdf:type owl:Class ;
   rdfs:subClassOf dogont:Controllable ;
+.
+vicci:Robot
+  rdf:type owl:Class ;
+  rdfs:subClassOf vicci:ProteusThings ;
 .
 vicci:RobotPosition
   rdf:type owl:Class ;
   rdfs:comment "The position of a vicci robot"^^xsd:string ;
   rdfs:subClassOf owl:Thing ;
-.
-vicci:hasFirstname
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain [
-      rdf:type owl:Class ;
-      owl:unionOf (
-          vicci:Person
-        ) ;
-    ] ;
-  rdfs:range xsd:string ;
-.
-vicci:hasLastname
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain [
-      rdf:type owl:Class ;
-      owl:unionOf (
-          vicci:Person
-        ) ;
-    ] ;
-  rdfs:range xsd:string ;
 .
 vicci:hasAge
   rdf:type owl:ObjectProperty ;
@@ -79,7 +87,37 @@ vicci:hasAge
     ] ;
   rdfs:range xsd:string ;
 .
+vicci:hasFirstname
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:Person
+        ) ;
+    ] ;
+  rdfs:range xsd:string ;
+.
 vicci:hasGender
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:Person
+        ) ;
+    ] ;
+  rdfs:range xsd:string ;
+.
+vicci:hasHealthMonitor
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:Person
+        ) ;
+    ] ;
+  rdfs:range vicci:HealthMonitor ;
+.
+vicci:hasLastname
   rdf:type owl:ObjectProperty ;
   rdfs:domain [
       rdf:type owl:Class ;
@@ -121,4 +159,14 @@ vicci:hasRobotPosition
         ) ;
     ] ;
   rdfs:range vicci:RobotPosition ;
+.
+vicci:isAvailable
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          vicci:ProteusThings
+        ) ;
+    ] ;
+  rdfs:range xsd:boolean ;
 .

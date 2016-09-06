@@ -1,0 +1,5 @@
+/* Steffen */
+String proteus_person_availability_steffen "Availability" (Person_Steffen)
+
+/* Ronny */
+String proteus_person_availability_ronny "Availability" (Person_Ronny)
