@@ -211,6 +211,7 @@ template:State_proteus_person_availability
   rdf:type vicci:AvailabilityState ;
   dogont:hasStateValue [
       rdf:type vicci:AvailabilityStateValue ;
+      dogont:realStateValue "unavailable"^^xsd:string ;
     ] ;
 .
 template:State_proteus_turtle_availability
