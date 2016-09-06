@@ -2,9 +2,11 @@
 
 String proteus_healthMonitor_heartRate_steffen "heart rate" (Health_Steffen)
 String proteus_healthMonitor_oxygenSaturation_steffen "blood oxygen saturation" (Health_Steffen)
+Switch proteus_healthMonitor_emergencyButton_steffen "emergency button" (Health_Steffen)
 
 /* Health for ronny */
 
 String proteus_healthMonitor_heartRate_ronny "heart rate" (Health_Ronny) 
 String proteus_healthMonitor_oxygenSaturation_ronny "blood oxygen saturation" (Health_Ronny)
+Switch proteus_healthMonitor_emergencyButton_ronny "emergency button" (Health_Ronny)
 

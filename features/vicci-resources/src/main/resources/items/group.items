@@ -5,6 +5,7 @@ Group Robot "Robots" ["home-group"]
 Group Health "Health" ["home-group"]
 Group Person "Person" ["home-group"]
 
+
 /* Tinkerforge */
 Group CS_Tinkerforge "Tinkerforge Brick 1" (CustomStuff)
 Group CS_Tinkerforge_Lcd "Tinkerforge 20x4 LCD 1" (CustomStuff)
@@ -28,7 +29,7 @@ Group CS_Homematic_Motion "Bewegungsmelder 1" (CustomStuff)
 Group CS_Homematic_Dimmer_1 "Dimmer 1" (CustomStuff)
 
 /* Homematic Dimmer 2 */
-Group CS_Homematic_Dimmer_2 "Dimmer 2" (CustomStuff)
+Group CS_Homematic_Dimmer_2 "Dimmer 2"(CustomStuff)
 
 /* Chime 1 */
 Group CS_Homematic_Chime_1 "Klingel 1" (CustomStuff)
@@ -37,16 +38,16 @@ Group CS_Homematic_Chime_1 "Klingel 1" (CustomStuff)
 Group CS_Homematic_Window_1 "Fenster 1" (CustomStuff)
 
 /* Keymatic */
-Group CS_Keymatic_1 "Tür 1" (CustomStuff)
+Group CS_Keymatic_1 "Tür 1"  (CustomStuff)
 
 /* C02 */
 Group CS_C02_1 "CO2 Sensor" (CustomStuff)
 
 /* Fingerscanner */
-Group CS_Fingerscan "Fingerprint Reader" (CustomStuff)
+Group CS_Fingerscan "Fingerprint Reader"  (CustomStuff)
 
 /* Kodi */
-Group CS_Kodi "Kodi" (CustomStuff)
+Group CS_Kodi "Kodi"  (CustomStuff)
 
 /* NFC */
 Group CS_Nfc "NFC Reader" (CustomStuff)

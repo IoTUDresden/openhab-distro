@@ -1,0 +1,39 @@
+sitemap proteus label="PROtEUS Resources"
+{
+
+	Group label="Robots" {
+		Frame label="Turtlebot" {
+			Frame label="Turtle Cam" {			
+				Webview url="http://192.168.1.57:8181/stream?topic=/camera/rgb/image_rect_color" height=15
+			}
+			Frame label="Status" {
+				Text item=ROS_Status icon="big_bulb"
+
+			}
+		
+			Frame label="Turtle Control" {
+				Text label="move right"
+				Text label="move left"
+				Text label="move back"
+				Text label="move forward"	
+			}
+
+		}
+	}
+
+	Group label="Persons" {
+		Frame label="Steffen"{
+			Group item=Person_Steffen
+			Group item=Health_Steffen								
+		}
+		Frame label="Ronny"{
+			Group item=Person_Ronny
+			Group item=Health_Ronny								
+		}
+	}
+
+	Group label="Tinkerforge" {
+		Frame label="Brick 1" item=CS_Tinkerforge 
+
+	}
+}
