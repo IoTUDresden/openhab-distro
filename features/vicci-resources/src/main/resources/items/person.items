@@ -1,5 +1,10 @@
+
+Group gPersons "Persons"
+Group gPerson_Steffen "Steffen" (gPersons)
+Group gPerson_Ronny "Ronny" (gPersons)
+
 /* Steffen */
-String proteus_person_availability_steffen "Availability" (Person_Steffen)
+String proteus_person_availability_steffen "Availability" (gPerson_Steffen)
 
 /* Ronny */
-String proteus_person_availability_ronny "Availability" (Person_Ronny)
+String proteus_person_availability_ronny "Availability" (gPerson_Ronny)

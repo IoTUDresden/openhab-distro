@@ -1,4 +1,6 @@
-/* Fingerscanner */
-Switch fingerscan_start "Start Scan" (CS_Fingerscan) {channel="fingerscanner:identify:firstinstance:channel-identify"}
+Group gFinger "Fingerprint"
 
-String fingerscanner_identify_channelPerson_1 "Read" (CS_Fingerscan) {channel="fingerscanner:identify:firstinstance:channel-person"}
+/* Fingerscanner */
+Switch fingerscan_start "Start Scan" (gFinger) {channel="fingerscanner:identify:firstinstance:channel-identify"}
+
+String fingerscanner_identify_channelPerson_1 "Read" (gFinger) {channel="fingerscanner:identify:firstinstance:channel-person"}

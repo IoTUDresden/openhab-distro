@@ -1,25 +1,35 @@
 
+Group gHomematic "Homematic"
+Group gDimmer "Dimmer" (gHomematic)
+Group gGong "Gong" (gHomematic)
+Group gMotion "Motion Detector" (gHomematic)
+Group gWindow "Window Contact" (gHomematic)
+Group gKey "Keymatic" (gHomematic)
+Group gCO2 "CO2" (gHomematic)
+
+
+
 /* Dimmer 1 */
-Dimmer homematic_dimmer_dimmer_1 "Dimmer [%d %%]" (CS_Homematic_Dimmer_1) {homematic="address=JEQ0193817, channel=1, parameter=LEVEL"}
+Dimmer homematic_dimmer_dimmer_1 "Dimmer [%d %%]" (gDimmer) {homematic="address=JEQ0193817, channel=1, parameter=LEVEL"}
 
 /* Dimmer 2 */
-Dimmer homematic_dimmer_dimmer_2 "Dimmer 2 [%d %%]" (CS_Homematic_Dimmer_2) {homematic="address=JEQ0567833, channel=1, parameter=LEVEL"}
+Dimmer homematic_dimmer_dimmer_2 "Dimmer 2 [%d %%]" (gDimmer) {homematic="address=JEQ0567833, channel=1, parameter=LEVEL"}
 
 /*Klingel 1 */
-Switch homematic_gong_lightGong_1 "Licht" (CS_Homematic_Chime_1) {homematic="address=JEQ0129257, channel=1, parameter=STATE"}
-Switch homematic_gong_gong_1 "Sound" (CS_Homematic_Chime_1) {homematic="address=JEQ0129257, channel=2, parameter=STATE"}
+Switch homematic_gong_lightGong_1 "Light" (gGong) {homematic="address=JEQ0129257, channel=1, parameter=STATE"}
+Switch homematic_gong_gong_1 "Sound" (gGong) {homematic="address=JEQ0129257, channel=2, parameter=STATE"}
 
 /* Motion Detector */
-Number homematic_motionIndicator_brightness_1 "Helligkeit [%d]" (CS_Homematic_Motion) {homematic="address=JEQ0266367, channel=1, parameter=BRIGHTNESS"}
-Switch homematic_motionIndicator_motionIndicator_1 "Bewegung" (CS_Homematic_Motion) {homematic="address=JEQ0266367, channel=1, parameter=MOTION"}
+Number homematic_motionIndicator_brightness_1 "brightness [%d]" (gMotion) {homematic="address=JEQ0266367, channel=1, parameter=BRIGHTNESS"}
+Switch homematic_motionIndicator_motionIndicator_1 "motion" (gMotion) {homematic="address=JEQ0266367, channel=1, parameter=MOTION"}
 
 
 /* Window Contact 1*/
-String Bath_Window "Fenster 1 [%s]" (CS_Homematic_Window_1) {homematic="address=JEQ0712908, channel=1, parameter=STATE"}
+String Bath_Window "Window 1 [%s]" (gWindow) {homematic="address=JEQ0712908, channel=1, parameter=STATE"}
 
 /* Door */
-Switch homematic_keymatic_keymatic_1 			"Verschließen [map(HM-Sec-Key-S.map):%s]" 	(CS_Keymatic_1) { homematic="address=JEQ0710776, channel=1, parameter=STATE" }
-Switch Keymatic_Open_1 		"Öffnen" 		(CS_Keymatic_1) { homematic="address=JEQ0710776, forceUpdate=true, channel=1, parameter=OPEN", autoUpdate="false" }
+Switch homematic_keymatic_keymatic_1 			"Lock [map(HM-Sec-Key-S.map):%s]" <lock> 	(gKey) { homematic="address=JEQ0710776, channel=1, parameter=STATE" }
+Switch Keymatic_Open_1 		"Open" 	<door>	(gKey)  { homematic="address=JEQ0710776, forceUpdate=true, channel=1, parameter=OPEN", autoUpdate="false" }
 
 /* C02 Sensor*/
-String homematic_co2_co2_1 "CO2 Gehalt [map(HM-CC-SCD.map):%s]" (CS_C02_1) {homematic="address=HEQ0083942, channel=1, parameter=STATE" }
+String homematic_co2_co2_1 "CO2 content [map(HM-CC-SCD.map):%s]" (gCO2) {homematic="address=HEQ0083942, channel=1, parameter=STATE" }

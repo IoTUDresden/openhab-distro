@@ -1,39 +1,38 @@
 sitemap proteus label="PROtEUS Resources"
-{
-
-	Group label="Robots" {
-		Frame label="Turtlebot" {
+{	
+	Frame label="Robots" {
+		Group item=gRobot
+		Text label="Robot Cams" {
 			Frame label="Turtle Cam" {			
 				Webview url="http://192.168.1.57:8181/stream?topic=/camera/rgb/image_rect_color" height=15
 			}
-			Frame label="Status" {
-				Text item=ROS_Status icon="big_bulb"
-
-			}
-		
-			Frame label="Turtle Control" {
-				Text label="move right"
-				Text label="move left"
-				Text label="move back"
-				Text label="move forward"	
-			}
-
 		}
 	}
-
-	Group label="Persons" {
-		Frame label="Steffen"{
-			Group item=Person_Steffen
-			Group item=Health_Steffen								
-		}
-		Frame label="Ronny"{
-			Group item=Person_Ronny
-			Group item=Health_Ronny								
-		}
+	
+	Frame label="Persons"{
+		Group item=gPersons
+		Group item=gHealth
+	}
+	
+	Frame label="Entertainment" {
+		Group item=gKodi 		
+	}
+	
+	Frame label="Home Control" {
+		Group item=gTinker
+		Group item=gHomematic
+		Group item=gNFC		
+		Group item=gFinger
+	}
+	
+	Frame label="Weather"{
+		Group item=gWeather_Berlin
+		Group item=gWeather_Dresden
+	}
+	
+	Frame label="Dummys"{
+		Group item=gHidden
 	}
 
-	Group label="Tinkerforge" {
-		Frame label="Brick 1" item=CS_Tinkerforge 
 
-	}
 }

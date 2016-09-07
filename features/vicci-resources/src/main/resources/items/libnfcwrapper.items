@@ -1,2 +1,4 @@
+Group gNFC "NFC"
+
 /* NFC Reader*/
-String libnfcwrapper_idscan_idscanResultChannel_1 "Uid" (CS_Nfc) {channel="libnfcwrapper:idscan:firstinstance:idscan-result-channel"}
+String libnfcwrapper_idscan_idscanResultChannel_1 "Uid" (gNFC) {channel="libnfcwrapper:idscan:firstinstance:idscan-result-channel"}

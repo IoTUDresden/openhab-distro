@@ -1,6 +1,9 @@
+Group gRobot "Robot Controls"
+Group gTurtle "Turtle" (gRobot)
+
 
 /* Turtle 1*/
-String proteus_turtle_currentLocation_1 "Current Location" (R_Turtle) {channel="viccirobot:robot:turtlebot1:currentLocation"}
-String proteus_turtle_move_1 "Move to" (R_Turtle) {channel="viccirobot:robot:turtlebot1:moveToLocation"}
-String proteus_turtle_movement_1 "Movement State" (R_Turtle) {channel="viccirobot:robot:turtlebot1:movementState"}
-String proteus_turtle_availability_1 "Availability"
+String proteus_turtle_currentLocation_1 "Current Location" (gTurtle) {channel="viccirobot:robot:turtlebot1:currentLocation"}
+String proteus_turtle_move_1 "Move to" (gTurtle) {channel="viccirobot:robot:turtlebot1:moveToLocation"}
+String proteus_turtle_movement_1 "Movement State" (gTurtle) {channel="viccirobot:robot:turtlebot1:movementState"}
+String proteus_turtle_availability_1 "Availability" (gTurtle)
