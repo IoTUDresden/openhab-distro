@@ -79,6 +79,12 @@ template:Function_kodi_kodicontrol_playerStop
   rdf:type dogont:SoundFunctionality ;
   dogont:hasCommand template:StopPlayingCommand_OpenHab ;
 .
+template:Function_proteus_healthMonitor_emergencyButton
+  rdf:type vicci:CallHelpFunctionality ;
+.
+template:Function_proteus_turtle_move
+  rdf:type vicci:RobotMovementFunctionality ;
+.
 template:Function_tinkerforge_ambientLight_ambientLight
   rdf:type dogont:LightSensingFunctionality ;
 .
@@ -193,6 +199,13 @@ template:State_libnfcwrapper_idscan_idscanResultChannel
       dogont:realStateValue "unknown"^^xsd:string ;
     ] ;
 .
+template:State_proteus_healthMonitor_emergencyButton
+  rdf:type vicci:CallHelpState ;
+  dogont:hasStateValue [
+      rdf:type dogont:OnStateValue ;
+      dogont:realStateValue "OFF"^^xsd:string ;
+    ] ;
+.
 template:State_proteus_healthMonitor_heartRate
   rdf:type vicci:HeartRateMeasurementState ;
   dogont:hasStateValue [
@@ -219,6 +232,20 @@ template:State_proteus_turtle_availability
   dogont:hasStateValue [
       rdf:type vicci:AvailabilityStateValue ;
       dogont:realStateValue "available"^^xsd:string ;
+    ] ;
+.
+template:State_proteus_turtle_move
+  rdf:type vicci:RobotPositionState ;
+  dogont:hasStateValue [
+      rdf:type vicci:RobotPositionStateValue ;
+      dogont:realStateValue "P: 0.00 0.00 O: 0.00 0.00"^^xsd:string ;
+    ] ;
+.
+template:State_proteus_turtle_movement
+  rdf:type vicci:RobotMovementState ;
+  dogont:hasStateValue [
+      rdf:type vicci:RobotMovementStateValue ;
+      dogont:realStateValue "Null"^^xsd:string ;
     ] ;
 .
 template:State_tinkerforge_ambientLight_ambientLight
@@ -344,6 +371,8 @@ template:Thing_libnfcwrapper_idscan
 .
 template:Thing_proteus_healthMonitor
   rdf:type vicci:HealthMonitor ;
+  dogont:hasFunctionality template:Function_proteus_healthMonitor_emergencyButton ;
+  dogont:hasState template:State_proteus_healthMonitor_emergencyButton ;
   dogont:hasState template:State_proteus_healthMonitor_heartRate ;
   dogont:hasState template:State_proteus_healthMonitor_oxygenSaturation ;
 .
@@ -353,7 +382,10 @@ template:Thing_proteus_person
 .
 template:Thing_proteus_turtle
   rdf:type vicci:Robot ;
+  dogont:hasFunctionality template:Function_proteus_turtle_move ;
   dogont:hasState template:State_proteus_turtle_availability ;
+  dogont:hasState template:State_proteus_turtle_move ;
+  dogont:hasState template:State_proteus_turtle_movement ;
 .
 template:Thing_tinkerforge_ambientLight
   rdf:type dogont:LightSensor ;

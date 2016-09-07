@@ -35,6 +35,14 @@ vicci:BloodOxygenSaturationStateValue
   rdf:type owl:Class ;
   rdfs:subClassOf dogont:ContinuousValue ;
 .
+vicci:CallHelpFunctionality
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:DiscreteNotificationFunctionality ;
+.
+vicci:CallHelpState
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:DiscreteState ;
+.
 vicci:Health
   rdf:type owl:Class ;
   rdfs:subClassOf dogont:Controllable ;
@@ -72,10 +80,34 @@ vicci:Robot
   rdf:type owl:Class ;
   rdfs:subClassOf vicci:ProteusThings ;
 .
+vicci:RobotMovementFunctionality
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:ContinuousControlFunctionality ;
+.
+vicci:RobotMovementState
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:DiscreteState ;
+.
+vicci:RobotMovementStateValue
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:DiscreteValue ;
+.
 vicci:RobotPosition
   rdf:type owl:Class ;
   rdfs:comment "The position of a vicci robot"^^xsd:string ;
   rdfs:subClassOf owl:Thing ;
+.
+vicci:RobotPositionCalculatingFunctionality
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:ContinuousControlFunctionality ;
+.
+vicci:RobotPositionState
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:DiscreteState ;
+.
+vicci:RobotPositionStateValue
+  rdf:type owl:Class ;
+  rdfs:subClassOf dogont:DiscreteValue ;
 .
 vicci:hasAge
   rdf:type owl:ObjectProperty ;
