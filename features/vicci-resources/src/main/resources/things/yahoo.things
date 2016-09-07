@@ -1,2 +1,2 @@
-yahooweather:weather:dresden [location="20065442"]
-yahooweather:weather:berlin [ location="638242" ]
+yahooweather:weather:dresden [location="20065442", refresh=60]
+yahooweather:weather:berlin [ location="638242", refresh=60 ]
