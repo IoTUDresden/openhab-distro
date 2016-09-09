@@ -1,6 +1,7 @@
 # baseURI: http://openhab-semantic/0.1/template
 # imports: http://elite.polito.it/ontologies/dogont.owl
 # imports: http://openhab-semantic/0.1/dogont-vicci-extension
+# prefix: template
 
 @prefix dogont: <http://elite.polito.it/ontologies/dogont.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -126,13 +127,6 @@ template:OnCommand_OpenHab
 template:PlayCommand_OpenHab
   rdf:type dogont:PlayCommand ;
 .
-template:State__homematic_gong_gong
-  rdf:type dogont:DiscreteState ;
-  dogont:hasStateValue [
-      rdf:type dogont:OnStateValue ;
-      dogont:realStateValue "unknown"^^xsd:string ;
-    ] ;
-.
 template:State_dummy_current_location
   rdf:type dogont:PresenceState ;
   dogont:hasStateValue [
@@ -160,6 +154,13 @@ template:State_homematic_dimmer_dimmer
       rdf:type dogont:LevelStateValue ;
       dogont:realStateValue "0"^^xsd:string ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/fraction/percent> ;
+    ] ;
+.
+template:State_homematic_gong_gong
+  rdf:type dogont:DiscreteState ;
+  dogont:hasStateValue [
+      rdf:type dogont:OnStateValue ;
+      dogont:realStateValue "unknown"^^xsd:string ;
     ] ;
 .
 template:State_homematic_gong_lightGong
@@ -343,7 +344,7 @@ template:Thing_homematic_gong
   rdf:type dogont:Buzzer ;
   dogont:hasFunctionality template:Function_homematic_gong_gong ;
   dogont:hasFunctionality template:Function_homematic_gong_lightGong ;
-  dogont:hasState template:State__homematic_gong_gong ;
+  dogont:hasState template:State_homematic_gong_gong ;
   dogont:hasState template:State_homematic_gong_lightGong ;
 .
 template:Thing_homematic_keymatic
