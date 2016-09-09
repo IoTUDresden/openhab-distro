@@ -1,7 +1,6 @@
 # baseURI: http://openhab-semantic/0.1/template
 # imports: http://elite.polito.it/ontologies/dogont.owl
 # imports: http://openhab-semantic/0.1/dogont-vicci-extension
-# prefix: template
 
 @prefix dogont: <http://elite.polito.it/ontologies/dogont.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -234,7 +233,7 @@ template:State_proteus_turtle_availability
       dogont:realStateValue "available"^^xsd:string ;
     ] ;
 .
-template:State_proteus_turtle_move
+template:State_proteus_turtle_currentLocation
   rdf:type vicci:RobotPositionState ;
   dogont:hasStateValue [
       rdf:type vicci:RobotPositionStateValue ;
@@ -384,7 +383,7 @@ template:Thing_proteus_turtle
   rdf:type vicci:Robot ;
   dogont:hasFunctionality template:Function_proteus_turtle_move ;
   dogont:hasState template:State_proteus_turtle_availability ;
-  dogont:hasState template:State_proteus_turtle_move ;
+  dogont:hasState template:State_proteus_turtle_currentLocation ;
   dogont:hasState template:State_proteus_turtle_movement ;
 .
 template:Thing_tinkerforge_ambientLight

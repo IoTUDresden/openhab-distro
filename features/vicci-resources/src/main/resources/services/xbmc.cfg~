@@ -7,8 +7,8 @@ third.host=192.168.1.7
 
 # Port number for the json rpc service (optional, defaults to 8080)
 first.rsPort=8282
-second.rsPort=8888
-third.rsPort=8888
+second.rsPort=8080
+third.rsPort=8080
 
 # Port number for the web socket service (optional, defaults to 9090)
 first.wsPort=9090

@@ -4,7 +4,7 @@ sitemap proteus label="PROtEUS Resources"
 		Group item=gRobot
 		Text label="Robot Cams" {
 			Frame label="Turtle Cam" {			
-				Webview url="http://192.168.1.57:8181/stream?topic=/camera/rgb/image_rect_color" height=15
+				Webview url="http://192.168.1.7:8181/stream?topic=/camera/rgb/image_rect_color" height=15
 			}
 		}
 	}
