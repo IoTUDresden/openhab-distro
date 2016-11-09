@@ -2331,6 +2331,11 @@
           locateNestedProjects="true">
         <excludedPath>ui/org.openhab.ui.cometvisu.php</excludedPath>
       </sourceLocator>
+      <sourceLocator
+          rootFolder="${git.clone.openhab2-addons.location/bundles}"
+          locateNestedProjects="true">
+        <excludedPath>core/org.openhab.core.compat1x.test</excludedPath>
+      </sourceLocator>
     </setupTask>
     <stream
         name="master"/>
