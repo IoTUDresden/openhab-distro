@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="openHAB Target Platform" sequenceNumber="156">
+<?pde version="3.8"?><target name="openHAB Target Platform" sequenceNumber="159">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.smarthome.feature.runtime.core.feature.group" version="0.0.0"/>
@@ -7,11 +7,11 @@
 <unit id="org.eclipse.smarthome.feature.runtime.console.equinox.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.smarthome.feature.runtime.rest.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.smarthome.feature.test.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/smarthome/updates-stable/"/>
+<repository location="http://ftp.fau.de/eclipse/smarthome/updates-stable/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.equinox.sdk.feature.group" version="3.10.2.v20150204-1316"/>
-<repository location="http://download.eclipse.org/releases/luna/201502271000"/>
+<repository location="http://ftp.fau.de/eclipse/releases/luna/201502271000"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.openhab.feature.p2.feature.group" version="0.0.0"/>
@@ -20,7 +20,7 @@
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.openhab.deps.runtime.feature.group" version="0.0.0"/>
 <unit id="org.openhab.deps.test.feature.group" version="0.0.0"/>
-<repository location="https://dl.bintray.com/openhab/p2/openhab-deps-repo/1.0.6"/>
+<repository location="https://dl.bintray.com/openhab/p2/openhab-deps-repo/1.0.9"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="net.minidev.asm" version="1.0.2"/>
