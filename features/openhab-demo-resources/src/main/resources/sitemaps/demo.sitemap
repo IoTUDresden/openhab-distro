@@ -3,11 +3,10 @@ sitemap demo label="Main Menu"
 	Frame {
 		Group item=gFF label="First Floor" icon="firstfloor"
 		Group item=gGF label="Ground Floor" icon="groundfloor"
-		Group item=gC label="Cellar" icon="cellar"	
-		Group item=Garden icon="garden" 
+		Group item=gC label="Cellar" icon="cellar"
+		Group item=Garden icon="garden"
 	}
 	Frame label="Weather" {
-		Text item=Sun_Elevation
 		Text item=Weather_Temperature valuecolor=[Weather_LastUpdate=="NULL"="lightgray",Weather_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {
 			Frame {
 				Text item=Weather_Temp_Max valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
@@ -21,8 +20,17 @@ sitemap demo label="Main Menu"
 				Chart item=Weather_Chart period=W refresh=3600 visibility=[Weather_Chart_Period==2]
 			}
 		}
+        Text label="Astronomical Data" icon="sun" {
+            Text item=Sun_Elevation
+            Text item=Sun_Azimuth
+            Text item=Sunrise_Time
+            Text item=Sunset_Time
+            Text item=Moon_Elevation
+            Text item=Moon_Azimuth
+            Text item=Moon_Phase
+        }
 	}
-	Frame label="Demo" {
+    Frame label="Demo" {
 		Text item=CurrentDate
 		Text label="Group Demo" icon="firstfloor" {
 			Switch item=Lights mappings=[OFF="All Off"]
@@ -56,12 +64,15 @@ sitemap demo label="Main Menu"
 				Slider item=Volume
 			}
 			Frame label="Multimedia Widgets" {
-				Image url="http://localhost:8080/icon/splash-ipad-h.png" label="openHAB" {
+				Image url="https://raw.github.com/wiki/openhab/openhab/images/features.png" label="openHAB" {
 					Text label="http://www.openHAB.org" icon="icon"
 				}
 				Video url="http://demo.openhab.org/Hue.m4v"
 				Webview url="http://heise-online.mobi/" height=8
+                Image url="http://fpoimg.com/320x240?text=openHAB" item=ImageURL
 			}
 		}
 	}
 }
+
+// vim: syntax=Xtend syntax=openhab

@@ -94,13 +94,12 @@ set JAVA_OPTS=%JAVA_OPTS% ^
   -Dopenhab.runtime=%OPENHAB_RUNTIME% ^
   -Dopenhab.userdata=%OPENHAB_USERDATA% ^
   -Dopenhab.logdir=%OPENHAB_LOGDIR% ^
+  -Dfelix.cm.dir=%OPENHAB_USERDATA%\config ^
   -Dorg.osgi.service.http.port=%HTTP_PORT% ^
   -Dorg.osgi.service.http.port.secure=%HTTPS_PORT%
 
 :: set jvm options
 set EXTRA_JAVA_OPTS=-XX:+UseG1GC ^
-  -Xms64m ^
-  -Xmx256m ^
   -Djava.awt.headless=true
 
 :: set JAVA_HOME if not set yet

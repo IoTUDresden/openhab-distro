@@ -13,9 +13,17 @@ removeOpenHABInit() {
 	fi
 }
 
+removeCache(){
+    rm -rf /var/lib/openhab2/cache
+    rm -rf /var/lib/openhab2/tmp
+	true
+}
+
 case "$1" in
 	remove)
 		removeOpenHABInit
+        removeCache
+        exit 0
 		;;
 	purge)
 		removeOpenHABInit
@@ -31,7 +39,11 @@ case "$1" in
 		rm -rf /etc/openhab2
 		exit 0
 		;;
-	abort-install|abort-upgrade|disappear|failed-upgrade|upgrade)
+    upgrade)
+        removeCache
+        exit 0
+        ;;
+	abort-install|abort-upgrade|disappear|failed-upgrade)
 		;;
 	*)
 		echo "postrm called with unknown argument \`$1'" >&2

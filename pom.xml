@@ -44,7 +44,9 @@
     </distributionManagement>
 
     <properties>
-        <esh.version>0.8.0-SNAPSHOT</esh.version>
+        <build.number>- local build -</build.number>
+
+        <esh.version>0.9.0-SNAPSHOT</esh.version>
         <ohc.version>2.0.0-SNAPSHOT</ohc.version>
         <oh2.version>2.0.0-SNAPSHOT</oh2.version>
         <oh1.version>1.9.0-SNAPSHOT</oh1.version>
@@ -116,6 +118,21 @@
             </plugin>
         </plugins>
     </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>openhab-bintray</id>
+            <name>Bintray Repository for openHAB</name>
+            <url>https://dl.bintray.com/openhab/mvn/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <repositories>
        <!-- ESH releases -->
