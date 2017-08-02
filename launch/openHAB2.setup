@@ -58,6 +58,14 @@
           value="enabled"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.annotation.nonnull"
+          value="javax.annotation.Nonnull"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.annotation.nullable"
+          value="javax.annotation.Nullable"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.annotation.nullanalysis"
           value="enabled"/>
       <setupTask
@@ -680,6 +688,18 @@
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.ui/sp_cleanup.use_type_arguments"
           value="false"/>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="org.eclipse.pde.ds.annotations">
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.pde.ds.annotations/enabled"
+          value="true"/>
+      <setupTask
+          xsi:type="setup:PreferenceTask"
+          key="/instance/org.eclipse.pde.ds.annotations/generateBundleActivationPolicyLazy"
+          value="true"/>
     </setupTask>
     <setupTask
         xsi:type="setup:CompoundTask"
@@ -2246,7 +2266,7 @@
     <requirement
         name="org.eclipse.wst.web_ui.feature.feature.group"/>
     <repository
-        url="http://dist.springsource.org/snapshot/GRECLIPSE/e4.6/"/>
+        url="http://dist.springsource.org/snapshot/GRECLIPSE/e4.7/"/>
   </setupTask>
   <setupTask
       xsi:type="git:GitCloneTask"
@@ -2281,9 +2301,6 @@
       xsi:type="projects:ProjectsImportTask">
     <sourceLocator
         rootFolder="${git.clone.openhab-distro.location/features}"
-        locateNestedProjects="true"/>
-    <sourceLocator
-        rootFolder="${git.clone.openhab-distro.location/docs}"
         locateNestedProjects="true"/>
     <sourceLocator
         rootFolder="${git.clone.openhab-distro.location/launch}"
@@ -2345,8 +2362,8 @@
     <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.openhab"
-        remoteURI="https://github.com/openhab/openhab.git"
-        pushURI="https://github.com/${github.user.id}/openhab.git">
+        remoteURI="https://github.com/openhab/openhab1-addons.git"
+        pushURI="https://github.com/${github.user.id}/openhab1-addons.git">
       <annotation
           source="http://www.eclipse.org/oomph/setup/InducedChoices">
         <detail
@@ -2369,9 +2386,14 @@
         xsi:type="projects:ProjectsImportTask">
       <sourceLocator
           rootFolder="${git.clone.openhab.location/bundles/binding}">
+        <excludedPath>org.openhab.binding.exec.test</excludedPath>
         <excludedPath>org.openhab.binding.fritzaha</excludedPath>
+        <excludedPath>org.openhab.binding.harmonyhub</excludedPath>
+        <excludedPath>org.openhab.binding.homematic.test</excludedPath>
         <excludedPath>org.openhab.binding.hue</excludedPath>
+        <excludedPath>org.openhab.binding.netatmo.test</excludedPath>
         <excludedPath>org.openhab.binding.sagercaster</excludedPath>
+        <excludedPath>org.openhab.binding.smarthomatic</excludedPath>
       </sourceLocator>
       <sourceLocator
           rootFolder="${git.clone.openhab.location/bundles/action}"/>
@@ -2466,6 +2488,9 @@
             pattern=".*/openhab-core/bundles/.*"/>
         <predicate
             xsi:type="predicates:LocationPredicate"
+            pattern=".*/smarthome/bundles/automation.*"/>
+        <predicate
+            xsi:type="predicates:LocationPredicate"
             pattern=".*/smarthome/bundles/core.*"/>
         <predicate
             xsi:type="predicates:LocationPredicate"
@@ -2483,6 +2508,8 @@
     </setupTask>
     <setupTask
         xsi:type="projects:ProjectsImportTask">
+      <sourceLocator
+          rootFolder="${git.clone.esh2.location/bundles/automation}"/>
       <sourceLocator
           rootFolder="${git.clone.esh2.location/bundles/core}"/>
       <sourceLocator
