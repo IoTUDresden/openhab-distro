@@ -8,4 +8,6 @@ String proteus_turtle_move_1 "Move to" (gTurtle) {channel="viccirobot:robot:turt
 String proteus_turtle_movement_1 "Movement State" (gTurtle) {channel="viccirobot:robot:turtlebot1:movementState"}
 Switch proteus_turtle_stopMovement_1 "Stop Movement" (gTurtle) {channel="viccirobot:robot:turtlebot1:stopMovement"}
 String proteus_turtle_availability_1 "Availability" (gTurtle)
+String proteus_turtle_simplePosition_1 "Simple Position" (gTurtle) {channel="viccirobot:robot:turtlebot1:simplePosition}
+
 

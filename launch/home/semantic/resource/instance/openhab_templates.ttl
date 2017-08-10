@@ -19,7 +19,7 @@ dogont:State_fingerscanner_identify_c6faf529_channel_person
   rdf:type owl:Ontology ;
   owl:imports <http://elite.polito.it/ontologies/dogont.owl> ;
   owl:imports <http://openhab-semantic/0.1/dogont-vicci-extension> ;
-  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  owl:versionInfo "Created with TopBraid Composer" ;
 .
 template:BloodOxygenSaturationStateValue_1
   rdf:type vicci:BloodOxygenSaturationStateValue ;
@@ -108,15 +108,15 @@ template:Function_yahooweather_weather_temperature
 .
 template:Kitchen_Mueller
   rdf:type dogont:Kitchen ;
-  rdfs:label "Kueche"^^xsd:string ;
+  rdfs:label "Kueche" ;
 .
 template:LivingRoom_Mueller
   rdf:type dogont:LivingRoom ;
-  rdfs:label "Wohnzimmer"^^xsd:string ;
+  rdfs:label "Wohnzimmer" ;
 .
 template:Lobby_Mueller
   rdf:type dogont:Lobby ;
-  rdfs:label "Flur"^^xsd:string ;
+  rdfs:label "Flur" ;
 .
 template:OffCommand_OpenHab
   rdf:type dogont:OffCommand ;
@@ -131,28 +131,28 @@ template:State_dummy_current_location
   rdf:type dogont:PresenceState ;
   dogont:hasStateValue [
       rdf:type dogont:PresentStateValue ;
-      dogont:realStateValue "unknown"^^xsd:string ;
+      dogont:realStateValue "unknown" ;
     ] ;
 .
 template:State_fingerscanner_identify_channelPerson
   rdf:type dogont:State ;
   dogont:hasStateValue [
       rdf:type dogont:AuthenticatedStateValue ;
-      dogont:realStateValue "unknown"^^xsd:string ;
+      dogont:realStateValue "unknown" ;
     ] ;
 .
 template:State_homematic_co2_co2
   rdf:type dogont:Co2MeasurementState ;
   dogont:hasStateValue [
       rdf:type dogont:Co2MeasurementStateValue ;
-      dogont:realStateValue "unknown"^^xsd:string ;
+      dogont:realStateValue "unknown" ;
     ] ;
 .
 template:State_homematic_dimmer_dimmer
   rdf:type dogont:LevelState ;
   dogont:hasStateValue [
       rdf:type dogont:LevelStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/fraction/percent> ;
     ] ;
 .
@@ -160,28 +160,28 @@ template:State_homematic_gong_gong
   rdf:type dogont:DiscreteState ;
   dogont:hasStateValue [
       rdf:type dogont:OnStateValue ;
-      dogont:realStateValue "unknown"^^xsd:string ;
+      dogont:realStateValue "unknown" ;
     ] ;
 .
 template:State_homematic_gong_lightGong
   rdf:type dogont:OnOffState ;
   dogont:hasStateValue [
       rdf:type dogont:OnStateValue ;
-      dogont:realStateValue "unknown"^^xsd:string ;
+      dogont:realStateValue "unknown" ;
     ] ;
 .
 template:State_homematic_keymatic_keymatic
   rdf:type dogont:OpenCloseState ;
   dogont:hasStateValue [
       rdf:type dogont:OpenStateValue ;
-      dogont:realStateValue "unknown"^^xsd:string ;
+      dogont:realStateValue "unknown" ;
     ] ;
 .
 template:State_homematic_motionIndicator_brightness
   rdf:type dogont:LightIntensityState ;
   dogont:hasStateValue [
       rdf:type dogont:BrightnessStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/illuminance/lux> ;
     ] ;
 .
@@ -189,70 +189,86 @@ template:State_homematic_motionIndicator_motionIndicator
   rdf:type dogont:MovementState ;
   dogont:hasStateValue [
       rdf:type dogont:MovingStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
     ] ;
 .
 template:State_libnfcwrapper_idscan_idscanResultChannel
   rdf:type dogont:PresenceState ;
   dogont:hasStateValue [
       rdf:type dogont:AuthenticatedStateValue ;
-      dogont:realStateValue "unknown"^^xsd:string ;
+      dogont:realStateValue "unknown" ;
     ] ;
 .
 template:State_proteus_healthMonitor_emergencyButton
   rdf:type vicci:CallHelpState ;
   dogont:hasStateValue [
       rdf:type dogont:OnStateValue ;
-      dogont:realStateValue "OFF"^^xsd:string ;
+      dogont:realStateValue "OFF" ;
     ] ;
 .
 template:State_proteus_healthMonitor_heartRate
   rdf:type vicci:HeartRateMeasurementState ;
   dogont:hasStateValue [
       rdf:type vicci:HeartRateStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
     ] ;
 .
 template:State_proteus_healthMonitor_oxygenSaturation
   rdf:type vicci:BloodOxygenSaturationMeasurementState ;
   dogont:hasStateValue [
       rdf:type vicci:BloodOxygenSaturationStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
     ] ;
 .
 template:State_proteus_person_availability
   rdf:type vicci:AvailabilityState ;
   dogont:hasStateValue [
       rdf:type vicci:AvailabilityStateValue ;
-      dogont:realStateValue "unavailable"^^xsd:string ;
+      dogont:realStateValue "unavailable" ;
     ] ;
+.
+template:State_proteus_person_simplePosition
+  rdf:type vicci:RobotSimplePositionState ;
+  dogont:hasStateValue [
+      rdf:type vicci:RobotSimplePositionStateValue ;
+      rdfs:label "Simple Position for Robots (only x, y needed and less precission)" ;
+    ] ;
+  rdfs:label "Simple Position for Robots (only x, y needed and less precission)" ;
 .
 template:State_proteus_turtle_availability
   rdf:type vicci:AvailabilityState ;
   dogont:hasStateValue [
       rdf:type vicci:AvailabilityStateValue ;
-      dogont:realStateValue "available"^^xsd:string ;
+      dogont:realStateValue "available" ;
     ] ;
 .
 template:State_proteus_turtle_currentLocation
   rdf:type vicci:RobotPositionState ;
   dogont:hasStateValue [
       rdf:type vicci:RobotPositionStateValue ;
-      dogont:realStateValue "P: 0.00 0.00 O: 0.00 0.00"^^xsd:string ;
+      dogont:realStateValue "P: 0.00 0.00 O: 0.00 0.00" ;
     ] ;
 .
 template:State_proteus_turtle_movement
   rdf:type vicci:RobotMovementState ;
   dogont:hasStateValue [
       rdf:type vicci:RobotMovementStateValue ;
-      dogont:realStateValue "Null"^^xsd:string ;
+      dogont:realStateValue "Null" ;
     ] ;
+.
+template:State_proteus_turtle_simplePosition
+  rdf:type vicci:RobotSimplePositionState ;
+  dogont:hasStateValue [
+      rdf:type vicci:RobotSimplePositionStateValue ;
+      rdfs:label "Simple Position for Robots (only x, y needed and less precission)" ;
+    ] ;
+  rdfs:label "Simple Position for Robots (only x, y needed and less precission)" ;
 .
 template:State_tinkerforge_ambientLight_ambientLight
   rdf:type dogont:LightIntensityState ;
   dogont:hasStateValue [
       rdf:type dogont:BrightnessStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/illuminance/lux> ;
     ] ;
 .
@@ -260,7 +276,7 @@ template:State_tinkerforge_barometer_barometer
   rdf:type dogont:PressureState ;
   dogont:hasStateValue [
       rdf:type dogont:PressureStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/pressure/bar> ;
     ] ;
 .
@@ -268,7 +284,7 @@ template:State_tinkerforge_humidity_humidity
   rdf:type dogont:HumidityMeasurementState ;
   dogont:hasStateValue [
       rdf:type dogont:HumidityStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/fraction/percent> ;
     ] ;
 .
@@ -276,7 +292,7 @@ template:State_tinkerforge_irTemp_ambTemp
   rdf:type dogont:TemperatureState ;
   dogont:hasStateValue [
       rdf:type dogont:TemperatureStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/temperature/degree-Celsius> ;
     ] ;
 .
@@ -284,7 +300,7 @@ template:State_tinkerforge_irTemp_irTemp
   rdf:type dogont:TemperatureState ;
   dogont:hasStateValue [
       rdf:type dogont:TemperatureStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/temperature/degree-Celsius> ;
     ] ;
 .
@@ -292,28 +308,28 @@ template:State_tinkerforge_lcd_backlight
   rdf:type dogont:OnOffState ;
   dogont:hasStateValue [
       rdf:type dogont:OffStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
     ] ;
 .
 template:State_tinkerforge_lcd_text
   rdf:type dogont:DiscreteState ;
   dogont:hasStateValue [
       rdf:type dogont:DiscreteValue ;
-      dogont:realStateValue " "^^xsd:string ;
+      dogont:realStateValue " " ;
     ] ;
 .
 template:State_yahooweather_weather_humidity
   rdf:type dogont:HumidityMeasurementState ;
   dogont:hasStateValue [
       rdf:type dogont:HumidityStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
     ] ;
 .
 template:State_yahooweather_weather_temperature
   rdf:type dogont:TemperatureState ;
   dogont:hasStateValue [
       rdf:type dogont:TemperatureStateValue ;
-      dogont:realStateValue "0"^^xsd:string ;
+      dogont:realStateValue "0" ;
       dogont:unitOfMeasure <http://purl.oclc.org/NET/muo/ucum/unit/temperature/degree-Celsius> ;
     ] ;
 .
