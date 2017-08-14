@@ -1,7 +1,6 @@
 # baseURI: http://openhab-semantic/0.1/template
 # imports: http://elite.polito.it/ontologies/dogont.owl
 # imports: http://openhab-semantic/0.1/dogont-vicci-extension
-# prefix: template
 
 @prefix dogont: <http://elite.polito.it/ontologies/dogont.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -231,6 +230,7 @@ template:State_proteus_person_simplePosition
   rdf:type vicci:RobotSimplePositionState ;
   dogont:hasStateValue [
       rdf:type vicci:RobotSimplePositionStateValue ;
+      dogont:realStateValue "P: 0.00 0.00 O: 0.00 0.00"^^xsd:string ;
       rdfs:label "Simple Position for Robots (only x, y needed and less precission)" ;
     ] ;
   rdfs:label "Simple Position for Robots (only x, y needed and less precission)" ;
@@ -260,6 +260,7 @@ template:State_proteus_turtle_simplePosition
   rdf:type vicci:RobotSimplePositionState ;
   dogont:hasStateValue [
       rdf:type vicci:RobotSimplePositionStateValue ;
+      dogont:realStateValue "P: 0.00 0.00 O: 0.00 0.00"^^xsd:string ;
       rdfs:label "Simple Position for Robots (only x, y needed and less precission)" ;
     ] ;
   rdfs:label "Simple Position for Robots (only x, y needed and less precission)" ;
