@@ -396,6 +396,7 @@ template:Thing_proteus_healthMonitor
 template:Thing_proteus_person
   rdf:type vicci:Person ;
   dogont:hasState template:State_proteus_person_availability ;
+  dogont:hasState template:State_proteus_person_simplePosition ;
 .
 template:Thing_proteus_turtle
   rdf:type vicci:Robot ;
@@ -403,6 +404,7 @@ template:Thing_proteus_turtle
   dogont:hasState template:State_proteus_turtle_availability ;
   dogont:hasState template:State_proteus_turtle_currentLocation ;
   dogont:hasState template:State_proteus_turtle_movement ;
+  dogont:hasState template:State_proteus_turtle_simplePosition ;
 .
 template:Thing_tinkerforge_ambientLight
   rdf:type dogont:LightSensor ;
