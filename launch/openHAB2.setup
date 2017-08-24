@@ -59,11 +59,11 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.annotation.nonnull"
-          value="javax.annotation.Nonnull"/>
+          value="org.eclipse.jdt.annotation.NonNull"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.annotation.nullable"
-          value="javax.annotation.Nullable"/>
+          value="org.eclipse.jdt.annotation.Nullable"/>
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.annotation.nullanalysis"
@@ -2271,8 +2271,8 @@
   <setupTask
       xsi:type="git:GitCloneTask"
       id="git.clone.openhab-distro"
-      remoteURI="https://github.com/andiikaa/openhab-distro.git"
-      pushURI="https://github.com/andiikaa/openhab-distro.git">
+      remoteURI="https://github.com/IoTUDresden/openhab-distro.git"
+      pushURI="https://github.com/IoTUDresden/openhab-distro.git">
     <annotation
         source="http://www.eclipse.org/oomph/setup/InducedChoices">
       <detail
@@ -2321,8 +2321,8 @@
     <setupTask
         xsi:type="git:GitCloneTask"
         id="git.clone.openhab2-addons"
-        remoteURI="https://github.com/andiikaa/openhab2.git"
-        pushURI="https://github.com/andiikaa/openhab2.git">
+        remoteURI="https://github.com/IoTUDresden/openhab2-addons.git"
+        pushURI="https://github.com/IoTUDresden/openhab2-addons.git">
       <annotation
           source="http://www.eclipse.org/oomph/setup/InducedChoices">
         <detail
@@ -2347,11 +2347,6 @@
           rootFolder="${git.clone.openhab2-addons.location/addons}"
           locateNestedProjects="true">
         <excludedPath>ui/org.openhab.ui.cometvisu.php</excludedPath>
-      </sourceLocator>
-      <sourceLocator
-          rootFolder="${git.clone.openhab2-addons.location/bundles}"
-          locateNestedProjects="true">
-        <excludedPath>core/org.openhab.core.compat1x.test</excludedPath>
       </sourceLocator>
     </setupTask>
     <stream
