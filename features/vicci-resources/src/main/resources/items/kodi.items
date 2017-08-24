@@ -1,31 +1,18 @@
-/*
-String kodi_friendly_name "Name" (CS_Kodi) {channel="kodi:kodicontrol:firstinstance:friendly-name"}
-
-String kodi_uptime "Uptime" (CS_Kodi) {channel="kodi:kodicontrol:firstinstance:uptime"}
-
-String kodi_kodicontrol_guiShowNotification_1 "Notification" (CS_Kodi) {channel="kodi:kodicontrol:firstinstance:gui-show-notification"}
-
-String kodi_kodicontrol_playerPlayFile_1 "Play File" (CS_Kodi) {channel="kodi:kodicontrol:firstinstance:player-play-file"}
-
-Switch kodi_kodicontrol_playerStop_1 "Stop" (CS_Kodi) {channel="kodi:kodicontrol:firstinstance:player-stop"}
-*/
-
-
 Group gKodi "Kodi"
 
 Group gKodi_1 "Kodi 1" (gKodi)
 Group gKodi_2 "Kodi 2" (gKodi)
 Group gKodi_3 "Kodi 3" (gKodi)
 
-/* old xbmc binding */
-String kodi_kodicontrol_guiShowNotification_1 "Notification" <selfTelevision> (gKodi_1) {xbmc=">[#first|GUI.ShowNotification]"}
-String kodi_kodicontrol_playerPlayFile_1 "Play File" (gKodi_1) {xbmc=">[#first|Player.Open]"}
-Switch kodi_kodicontrol_playerStop_1 "Stop" (gKodi_1) {xbmc=">[#first|Player.Stop]"}
+String kodi_kodicontrol_guiShowNotification_1 "Notification" (gKodi_1) { channel="kodi:kodi:kodi_1:shownotification" }
+String kodi_kodicontrol_playerPlayFile_1 "Play File" (gKodi_1) { channel="kodi:kodi:kodi_1:playuri" }
+Switch kodi_kodicontrol_playerStop_1 "Stop" (gKodi_1) { channel="kodi:kodi:kodi_1:stop" }
 
-String kodi_kodicontrol_guiShowNotification_2 "Notification" (gKodi_2) {xbmc=">[#second|GUI.ShowNotification]"}
-String kodi_kodicontrol_playerPlayFile_2 "Play File" (gKodi_2) {xbmc=">[#second|Player.Open]"}
-Switch kodi_kodicontrol_playerStop_2 "Stop" (gKodi_2) {xbmc=">[#second|Player.Stop]"}
+String kodi_kodicontrol_guiShowNotification_2 "Notification" (gKodi_2) { channel="kodi:kodi:kodi_2:shownotification" }
+String kodi_kodicontrol_playerPlayFile_2 "Play File" (gKodi_2) { channel="kodi:kodi:kodi_2:playuri" }
+Switch kodi_kodicontrol_playerStop_2 "Stop" (gKodi_2) { channel="kodi:kodi:kodi_2:stop" }
 
-String kodi_kodicontrol_guiShowNotification_3 "Notification" (gKodi_3) {xbmc=">[#third|GUI.ShowNotification]"}
-String kodi_kodicontrol_playerPlayFile_3 "Play File" (gKodi_3) {xbmc=">[#third|Player.Open]"}
-Switch kodi_kodicontrol_playerStop_3 "Stop" (gKodi_3) {xbmc=">[#third|Player.Stop]"}
+String kodi_kodicontrol_guiShowNotification_3 "Notification" (gKodi_3) { channel="kodi:kodi:kodi_3:shownotification" }
+String kodi_kodicontrol_playerPlayFile_3 "Play File" (gKodi_3) { channel="kodi:kodi:kodi_3:playuri" }
+Switch kodi_kodicontrol_playerStop_3 "Stop" (gKodi_3) { channel="kodi:kodi:kodi_3:stop" }
+
