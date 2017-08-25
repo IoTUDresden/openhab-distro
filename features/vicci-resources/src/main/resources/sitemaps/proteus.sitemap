@@ -23,6 +23,7 @@ sitemap proteus label="PROtEUS Resources"
 		Group item=gHomematic
 		Group item=gNFC		
 		Group item=gFinger
+		Group item=gHue
 	}
 	
 	Frame label="Weather"{
