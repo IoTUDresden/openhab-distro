@@ -6,6 +6,7 @@ Group gMotion "Motion Detector" (gHomematic)
 Group gWindow "Window Contact" (gHomematic)
 Group gKey "Keymatic" (gHomematic)
 Group gCO2 "CO2" (gHomematic)
+Group gPresence "Presence" (gHomematic)
 
 
 /* Dimmer 1 */
@@ -32,6 +33,15 @@ Switch Keymatic_Open_1 		"Open" 	<door>	(gKey)  { channel="homematic:HM-Sec-Key:
 
 /* C02 Sensor*/
 String homematic_co2_co2_1 "CO2 content [map(HM-CC-SCD.map):%s]" (gCO2) { channel="homematic:HM-CC-SCD:ccu:HEQ0083942:1#STATE" }
+
+/* Presence */
+Switch homematic_presence_detectionActive_1             "Active"                 (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#PRESENCE_DETECTION_ACTIVE" }
+Switch homematic_presence_resetPresence_1               "Reset"                  (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#RESET_PRESENCE" }
+Switch homematic_presence_presenceDetectionState_1      "State"                  (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#PRESENCE_DETECTION_STATE" }
+Number homematic_presence_illumination_1                "Illumination"           (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#ILLUMINATION" }
+Number homematic_presence_currentIllumination_1         "Current Illumination"   (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#CURRENT_ILLUMINATION" }
+
+
 
 /*
 HM-LC-Dim1T-Pl-2 JEQ0193817:1

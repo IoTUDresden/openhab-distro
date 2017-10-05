@@ -24,6 +24,11 @@ sitemap proteus label="PROtEUS Resources"
 		Group item=gNFC		
 		Group item=gFinger
 		Group item=gHue
+		Group item=gCoffee
+	}
+	
+	Frame label="Misc" {
+	   Group item=gAda
 	}
 	
 	Frame label="Weather"{

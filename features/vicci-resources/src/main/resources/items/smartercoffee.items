@@ -1,0 +1,23 @@
+Group gCoffee "Smarter Coffee"
+
+// using ibrew rest api
+Switch smartercoffee_coffeemachine_status_1      "Brewing"          (gCoffee) {http="<[coffeeStateCache:3000:JS(coffee_state.js)]"}
+Switch smartercoffee_coffeemachine_waterLevel_1  "Enough Water"     (gCoffee) {http="<[coffeeStateCache:3000:JS(coffee_water.js)]"}
+
+// using coffee binding
+//Group gCoffeeGn "General" (gCoffee)
+//String smartercoffee_coffeemachine_status_1             "State"                 (gCoffeeGn) {channel="smartercoffee:coffeemachine:demo:general_grp#status"}
+//String smartercoffee_coffeemachine_currentSettings_1    "Current Settings"      (gCoffeeGn) {channel="smartercoffee:coffeemachine:demo:general_grp#current_settings"}
+//String smartercoffee_coffeemachine_waterLevel_1         "Water Level"           (gCoffeeGn) {channel="smartercoffee:coffeemachine:demo:general_grp#water_level"}
+//
+//Switch smartercoffee_coffeemachine_useBeans_1           "Use Beans"         (gCoffee) {channel="smartercoffee:coffeemachine:demo:coffee_grp#use_beans"}
+/////min 1, max 10
+//Number smartercoffee_coffeemachine_numberOfCups_1       "Number Of Cups"    (gCoffee) {channel="smartercoffee:coffeemachine:demo:coffee_grp#no_of_cups"}
+///*Switch smartercoffee_coffeemachine_hotplate_1*/
+////min 1 max 40
+//Number smartercoffee_coffeemachine_hotplateTimer_1      "Hotplate Timer"    (gCoffee) {channel="smartercoffee:coffeemachine:demo:coffee_grp#hotplate_timer"}
+//Switch smartercoffee_coffeemachine_grind_1              "Grind"             (gCoffee) {channel="smartercoffee:coffeemachine:demo:coffee_grp#grind"}
+//
+////weak, medium, strong
+//String smartercoffee_coffeemachine_strength_1           "Strength"          (gCoffee) {channel="smartercoffee:coffeemachine:demo:coffee_grp#strength"}
+//Switch smartercoffee_coffeemachine_brew_1               "Brew"              (gCoffee) {channel="smartercoffee:coffeemachine:demo:coffee_grp#brew"}
