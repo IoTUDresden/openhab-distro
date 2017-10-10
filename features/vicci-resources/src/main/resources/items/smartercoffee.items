@@ -1,8 +1,9 @@
 Group gCoffee "Smarter Coffee"
 
 // using ibrew rest api
-Switch smartercoffee_coffeemachine_status_1      "Brewing"          (gCoffee) {http="<[coffeeStateCache:3000:JS(coffee_state.js)]"}
-Switch smartercoffee_coffeemachine_waterLevel_1  "Enough Water"     (gCoffee) {http="<[coffeeStateCache:3000:JS(coffee_water.js)]"}
+String smartercoffee_coffeemachine_ready_1          "Ready"         (gCoffee) {http="<[coffeeStateCache:3000:JSONPATH($.status.ready)]"}  
+String smartercoffee_coffeemachine_waterLevel_1     "Water Level"    (gCoffee) {http="<[coffeeStateCache:3000:JSONPATH($.sensors.waterlevel)]"}
+Switch smartercoffee_coffeemachine_brew_1           "Brew"           (gCoffee) {http=">[ON:GET:http://localhost:2080/api/192.168.1.4/start]", autoupdate="false"}
 
 // using coffee binding
 //Group gCoffeeGn "General" (gCoffee)

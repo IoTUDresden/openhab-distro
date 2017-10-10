@@ -5,4 +5,4 @@ Switch Health_Button "Health" (gHidden)
 String Say_Text "Say Text" (gHidden)
 String dummy_current_location_1 "Current Location" (gHidden)
 
-String adafruit_playground_color "Adafruit Color [%s]" (gAda) { serial="/dev/ttyACM0", autoupdate="true" }
+String adafruit_playground_color "Adafruit Color [%s]" <rgb> (gAda) { serial="/dev/ttyACM0", autoupdate="true" }

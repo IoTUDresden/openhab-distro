@@ -2,7 +2,7 @@ sitemap proteus label="PROtEUS Resources"
 {	
 	Frame label="Robots" {
 		Group item=gRobot
-		Text label="Robot Cams" {
+		Text label="Robot Cams" icon="camera" {
 			Frame label="Turtle Cam" {			
 				Webview url="http://192.168.1.7:8181/stream?topic=/camera/rgb/image_rect_color" height=15
 			}
@@ -15,7 +15,7 @@ sitemap proteus label="PROtEUS Resources"
 	}
 	
 	Frame label="Entertainment" {
-		Group item=gKodi 		
+		Group item=gKodi icon="television" 		
 	}
 	
 	Frame label="Home Control" {
@@ -23,8 +23,13 @@ sitemap proteus label="PROtEUS Resources"
 		Group item=gHomematic
 		Group item=gNFC		
 		Group item=gFinger
-		Group item=gHue
-		Group item=gCoffee
+		Group item=gHue icon="colorlight"
+		
+		Text label="Smarter Coffee" icon="kitchen"{
+            Text item=smartercoffee_coffeemachine_ready_1       label="Ready [%s]"          icon="switch"  
+            Text item=smartercoffee_coffeemachine_waterLevel_1  label="Water Level [%d]"    icon="coffee_waterlevel"
+            Switch item=smartercoffee_coffeemachine_brew_1      label="Brew"                icon="switch"
+		}
 	}
 	
 	Frame label="Misc" {
