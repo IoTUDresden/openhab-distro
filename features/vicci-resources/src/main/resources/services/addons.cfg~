@@ -6,7 +6,7 @@
 #package = standard
 
 # A comma-separated list of bindings to install (e.g. "sonos,knx,zwave")
-binding = homematic, kodi, hue, serial1, http1, tinkerforge1
+binding = tinkerforge, homematic, kodi, hue, serial, http
 
 # A comma-separated list of UIs to install (e.g. "basic,paper")
 ui = basic, paper
