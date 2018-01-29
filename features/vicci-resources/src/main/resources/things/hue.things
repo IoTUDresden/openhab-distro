@@ -1,7 +1,9 @@
-Bridge hue:bridge:hue_1 [ipAddress="192.168.1.66", userName="Bi5uBEjzBAlapJJ66tvduPh5j8UjDcaBFsaRLxO5" ]
+/*Bridge hue:bridge:hue_1 [ipAddress="192.168.1.66", userName="Bi5uBEjzBAlapJJ66tvduPh5j8UjDcaBFsaRLxO5" ]*/
+Bridge hue:bridge:hue_1 [ipAddress="192.168.1.66", userName="kJkTxCcerSp1r30Mr-tGvaKU09Erbw6jybPg61nv" ]
 {
     0210 bulb1 [ lightId="1"]
-    0210 bulb2 [ lightId="4"]
-    0200 iris1 [ lightId="5"]
+    0210 bulb2 [ lightId="2"]
+    0210 bulb3 [ lightId="3"]
+    0210 iris1 [ lightId="4"]
 
 }

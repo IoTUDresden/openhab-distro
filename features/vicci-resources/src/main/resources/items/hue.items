@@ -1,6 +1,7 @@
 Group gHue "Hue"
 Group gBulb1 "Bulb 1" (gHue)
 Group gBulb2 "Bulb 2" (gHue)
+Group gBulb3 "Bulb 3" (gHue)
 Group gIris1 "Iris 1" (gHue)
 
 
@@ -22,11 +23,20 @@ Dimmer hue_bulb210_colorTemp_2   "Color-Temperature"    (gBulb2)            {cha
 String  hue_bulb210_alert_2      "Alert"                (gBulb2)            {channel="hue:0210:hue_1:bulb2:alert"}
 Switch  hue_bulb210_effect_2     "Effect"               (gBulb2)            {channel="hue:0210:hue_1:bulb2:effect"}
 
-/* Iris*/
-Switch  hue_iris_light_1         "On/Off"               (gIris1)            {channel="hue:0200:hue_1:iris1:color"}
-Dimmer hue_iris_dimmer_1         "Dimmer"               (gIris1)            {channel="hue:0200:hue_1:iris1:color"}
-Color  hue_iris_color_1          "Color"                (gIris1)            {channel="hue:0200:hue_1:iris1:color"}
-Dimmer hue_iris_colorTemp_1      "Color-Temperature"    (gIris1)            {channel="hue:0200:hue_1:iris1:color_temperature"}
+/* Bulb 3*/
+Switch  hue_bulb210_light_3      "On/Off"               (gBulb3)            {channel="hue:0210:hue_1:bulb3:color"}
+Dimmer hue_bulb210_dimmer_3      "Dimmer"               (gBulb3)            {channel="hue:0210:hue_1:bulb3:color"}
+Color  hue_bulb210_color_3       "Color"                (gBulb3)            {channel="hue:0210:hue_1:bulb3:color"}
+Dimmer hue_bulb210_colorTemp_3   "Color-Temperature"    (gBulb3)            {channel="hue:0210:hue_1:bulb3:color_temperature"}
 /*supported values NONE, SELECT, LSELECT*/
-String  hue_iris_alert_1         "Alert"                (gIris1)            {channel="hue:0200:hue_1:iris1:alert"}
-Switch  hue_iris_effect_1        "Effect"               (gIris1)           {channel="hue:0200:hue_1:iris1:effect"}
+String  hue_bulb210_alert_3      "Alert"                (gBulb3)            {channel="hue:0210:hue_1:bulb3:alert"}
+Switch  hue_bulb210_effect_3     "Effect"               (gBulb3)            {channel="hue:0210:hue_1:bulb3:effect"}
+
+/* Iris*/
+Switch  hue_iris_light_1         "On/Off"               (gIris1)            {channel="hue:0210:hue_1:iris1:color"}
+Dimmer hue_iris_dimmer_1         "Dimmer"               (gIris1)            {channel="hue:0210:hue_1:iris1:color"}
+Color  hue_iris_color_1          "Color"                (gIris1)            {channel="hue:0210:hue_1:iris1:color"}
+Dimmer hue_iris_colorTemp_1      "Color-Temperature"    (gIris1)            {channel="hue:0210:hue_1:iris1:color_temperature"}
+/*supported values NONE, SELECT, LSELECT*/
+String  hue_iris_alert_1         "Alert"                (gIris1)            {channel="hue:0210:hue_1:iris1:alert"}
+Switch  hue_iris_effect_1        "Effect"               (gIris1)           {channel="hue:0210:hue_1:iris1:effect"}
