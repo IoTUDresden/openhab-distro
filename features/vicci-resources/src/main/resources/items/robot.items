@@ -1,0 +1,22 @@
+Group gRobot "Robot Controls"
+Group gTurtle "Turtle 1" (gRobot)
+Group gTurtle2 "Turtle 2" (gRobot)
+
+
+/* Turtle 1*/
+String proteus_turtle_currentLocation_1 "Current Location" (gTurtle) {channel="viccirobot:robot:turtlebot1:currentLocation"}
+String proteus_turtle_move_1 "Move to" (gTurtle) {channel="viccirobot:robot:turtlebot1:moveToLocation"}
+String proteus_turtle_movement_1 "Movement State" (gTurtle) {channel="viccirobot:robot:turtlebot1:movementState"}
+Switch proteus_turtle_stopMovement_1 "Stop Movement" (gTurtle) {channel="viccirobot:robot:turtlebot1:stopMovement"}
+String proteus_turtle_availability_1 "Availability" (gTurtle)
+String proteus_turtle_simplePosition_1 "Simple Position" (gTurtle) {channel="viccirobot:robot:turtlebot1:simplePosition"}
+
+/* Turtle 2*/
+String proteus_turtle_currentLocation_2 "Current Location" (gTurtle2) {channel="viccirobot:robot:turtlebot2:currentLocation"}
+String proteus_turtle_move_2 "Move to" (gTurtle2) {channel="viccirobot:robot:turtlebot2:moveToLocation"}
+String proteus_turtle_movement_2 "Movement State" (gTurtle2) {channel="viccirobot:robot:turtlebot2:movementState"}
+Switch proteus_turtle_stopMovement_2 "Stop Movement" (gTurtle2) {channel="viccirobot:robot:turtlebot2:stopMovement"}
+String proteus_turtle_availability_2 "Availability" (gTurtle2)
+String proteus_turtle_simplePosition_2 "Simple Position" (gTurtle2) {channel="viccirobot:robot:turtlebot2:simplePosition"}
+
+

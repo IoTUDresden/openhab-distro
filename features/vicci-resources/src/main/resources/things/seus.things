@@ -1,0 +1,8 @@
+
+fingerscanner:identify:firstinstance
+
+libnfcwrapper:idscan:firstinstance
+
+viccirobot:robot:turtlebot1 [robotType="turtlebot", robotHost="192.168.1.56", robotPort=9999]
+
+viccirobot:robot:turtlebot2 [robotType="turtlebot", robotHost="192.168.1.58", robotPort=9999]

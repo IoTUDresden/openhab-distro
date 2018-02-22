@@ -1,0 +1,17 @@
+Group gHealth "Health"
+Group gHealth_Steffen "Health Steffen" (gHealth)
+Group gHealth_Ronny "Health Ronny" (gHealth)
+
+
+/* Health for steffen */
+
+Number proteus_healthMonitor_heartRate_steffen "heart rate" (gHealth_Steffen)
+Number proteus_healthMonitor_oxygenSaturation_steffen "blood oxygen saturation" (gHealth_Steffen)
+Switch proteus_healthMonitor_emergencyButton_steffen "emergency button" (gHealth_Steffen)
+
+/* Health for ronny */
+
+Number proteus_healthMonitor_heartRate_ronny "heart rate" (gHealth_Ronny) 
+Number proteus_healthMonitor_oxygenSaturation_ronny "blood oxygen saturation" (gHealth_Ronny)
+Switch proteus_healthMonitor_emergencyButton_ronny "emergency button" (gHealth_Ronny)
+

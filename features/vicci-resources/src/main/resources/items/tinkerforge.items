@@ -1,0 +1,57 @@
+
+Group gTinker "Tinkerforge"
+
+Group gTinker_1 "Tinkerforge 1" (gTinker)
+Group gTinker_2 "Tinkerforge 2" (gTinker)
+Group gTinker_3 "Tinkerforge 3" (gTinker)
+Group gTinker_4 "Tinkerforge 4" (gTinker)
+
+/* Brick Kaffee*/
+Number tinkerforge_humidity_humidity_1 		"Humidity [%.1f %%]" 		(gTinker_1) { tinkerforge="uid=deb" }
+Number tinkerforge_ambientLight_ambientLight_1	"Luminance [%.1f Lux]" 		(gTinker_1) { tinkerforge="uid=equ" }
+Number tinkerforge_barometer_barometer_1     "Air Pressure [%.1f mbar]" 	(gTinker_1) { tinkerforge="uid=euq" }
+
+/*LCD kaffee*/
+String tinkerforge_lcd_text_1 	"Lcd"			(gTinker_1)	{ tinkerforge="uid=ezm" }
+Switch tinkerforge_lcd_backlight_1     "LCDBacklight"	(gTinker_1)	{ tinkerforge="uid=ezm, subid=backlight" }
+Switch Button0         "Button0" 		(gTinker_1)	{ tinkerforge="uid=ezm, subid=button0"}
+Switch Button1         "Button1" 		(gTinker_1)	{ tinkerforge="uid=ezm, subid=button1"}
+Switch Button2         "Button2" 		(gTinker_1)	{ tinkerforge="uid=ezm, subid=button2"}
+Switch Button3         "Button3" 		(gTinker_1)	{ tinkerforge="uid=ezm, subid=button3"}
+
+/* LCD 2 (lose)*/
+String tinkerforge_lcd_text_2 	"Lcd 2"			(gTinker_2)	{ tinkerforge="uid=9d9" }
+Switch tinkerforge_lcd_backlight_2     "LCDBacklight 2"	(gTinker_2)	{ tinkerforge="uid=9d9, subid=backlight" }
+Switch Button0_2         "Button0 2" 		(gTinker_2)	{ tinkerforge="uid=9d9, subid=button0"}
+Switch Button1_2         "Button1 2" 		(gTinker_2)	{ tinkerforge="uid=9d9, subid=button1"}
+Switch Button2_2         "Button2 2" 		(gTinker_2)	{ tinkerforge="uid=9d9, subid=button2"}
+
+/* Brick 2 (lose) */
+Number tinkerforge_irTemp_irTemp_1 "IR Temp [%.1f °C]" 					(gTinker_2) 	{ tinkerforge="uid=9uS, subid=object_temperature" }
+Number tinkerforge_irTemp_ambTemp_1 "Ambiente Temp [%.1f °C]" 				(gTinker_2) 	{ tinkerforge="uid=9uS, subid=ambient_temperature" }
+Number LinearPoti "Linear Poti [%.0f]" 	(gTinker_2) 	{ tinkerforge="uid=8cJ" }
+Number tinkerforge_ambientLight_ambientLight_2	"Luminance [%.1f Lux]" 		(gTinker_2) { tinkerforge="uid=b43" }
+
+/*Brick 3 (fenster)*/
+Number tinkerforge_humidity_humidity_3        "Humidity [%.1f %%]"        (gTinker_3) { tinkerforge="uid=ddc" }
+Number tinkerforge_ambientLight_ambientLight_3  "Luminance [%.1f Lux]"      (gTinker_3) { tinkerforge="uid=eqq" }
+Number tinkerforge_barometer_barometer_3     "Air Pressure [%.1f mbar]"     (gTinker_3) { tinkerforge="uid=euy" }
+
+/*lcd 3 (fenster)*/
+String tinkerforge_lcd_text_3   "Lcd 3"         (gTinker_3)  { tinkerforge="uid=ezf" }
+Switch tinkerforge_lcd_backlight_3     "LCDBacklight 2" (gTinker_3)  { tinkerforge="uid=ezf, subid=backlight" }
+Switch Button0_3         "Button0 3"        (gTinker_3)  { tinkerforge="uid=ezf, subid=button0"}
+Switch Button1_3         "Button1 3"        (gTinker_3)  { tinkerforge="uid=ezf, subid=button1"}
+Switch Button2_3         "Button2 3"        (gTinker_3)  { tinkerforge="uid=ezf, subid=button2"}
+
+/*Brick 4 (tisch)*/
+Number tinkerforge_humidity_humidity_4        "Humidity [%.1f %%]"        (gTinker_4) { tinkerforge="uid=dcW" }
+Number tinkerforge_ambientLight_ambientLight_4  "Luminance [%.1f Lux]"      (gTinker_4) { tinkerforge="uid=eqo" }
+Number tinkerforge_barometer_barometer_4     "Air Pressure [%.1f mbar]"     (gTinker_4) { tinkerforge="uid=et1" }
+
+/*lcd 4 (tisch)*/
+String tinkerforge_lcd_text_4   "Lcd 4"         (gTinker_4)  { tinkerforge="uid=ezJ" }
+Switch tinkerforge_lcd_backlight_4     "LCDBacklight 2" (gTinker_4)  { tinkerforge="uid=ezJ, subid=backlight" }
+Switch Button0_4         "Button0 4"        (gTinker_4)  { tinkerforge="uid=ezJ, subid=button0"}
+Switch Button1_4         "Button1 4"        (gTinker_4)  { tinkerforge="uid=ezJ, subid=button1"}
+Switch Button2_4         "Button2 4"        (gTinker_4)  { tinkerforge="uid=ezJ, subid=button2"}

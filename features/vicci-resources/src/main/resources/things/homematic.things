@@ -1,0 +1,13 @@
+Bridge homematic:bridge:ccu [gatewayAddress="192.168.1.2", callbackHost="192.168.1.2"]
+{
+
+    Thing HM-LC-Dim1T-Pl-2  JEQ0193817 /* Dimmer 1*/
+    Thing HM-LC-Dim1L-Pl-2  JEQ0567833 /* Dimmer 2*/
+    Thing HM-OU-CF-Pl       JEQ0129257 /* Gong 1*/
+    Thing HM-Sec-MDIR       JEQ0266367 /* Motion 1*/
+    Thing HM-Sec-RHS        JEQ0712908 /* Window 1*/
+    Thing HM-Sec-Key        JEQ0710776 /* Keymatic 1*/
+    Thing HM-CC-SCD         HEQ0083942 /* CO2 */   
+    Thing HmIP-SPI          000C17099A0401 /* Presence */ 
+
+}

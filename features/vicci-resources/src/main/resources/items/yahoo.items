@@ -1,0 +1,9 @@
+Group gWeather "Weather"
+Group gWeather_Berlin "Berlin Weather" (gWeather)
+Group gWeather_Dresden "Dresden Weather" (gWeather)
+
+
+Number yahooweather_weather_temperature_dresden "Dresden Temperature" (gWeather_Dresden) {channel="yahooweather:weather:dresden:temperature"}
+Number yahooweather_weather_humidity_dresden "Dresden Humidity" (gWeather_Dresden) {channel="yahooweather:weather:dresden:humidity"}
+
+Number yahooweather_weather_temperature_berlin "Berlin Temperature" (gWeather_Berlin) {channel="yahooweather:weather:berlin:temperature"}  

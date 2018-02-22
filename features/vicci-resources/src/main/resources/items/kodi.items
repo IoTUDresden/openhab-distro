@@ -1,0 +1,18 @@
+Group gKodi "Kodi"
+
+Group gKodi_1 "Kodi 1" (gKodi)
+Group gKodi_2 "Kodi 2" (gKodi)
+Group gKodi_3 "Kodi 3" (gKodi)
+
+String kodi_kodicontrol_guiShowNotification_1 "Notification" (gKodi_1) { channel="kodi:kodi:kodi_1:shownotification" }
+String kodi_kodicontrol_playerPlayFile_1 "Play File" (gKodi_1) { channel="kodi:kodi:kodi_1:playuri" }
+Switch kodi_kodicontrol_playerStop_1 "Stop" (gKodi_1) { channel="kodi:kodi:kodi_1:stop" }
+
+String kodi_kodicontrol_guiShowNotification_2 "Notification" (gKodi_2) { channel="kodi:kodi:kodi_2:shownotification" }
+String kodi_kodicontrol_playerPlayFile_2 "Play File" (gKodi_2) { channel="kodi:kodi:kodi_2:playuri" }
+Switch kodi_kodicontrol_playerStop_2 "Stop" (gKodi_2) { channel="kodi:kodi:kodi_2:stop" }
+
+String kodi_kodicontrol_guiShowNotification_3 "Notification" (gKodi_3) { channel="kodi:kodi:kodi_3:shownotification" }
+String kodi_kodicontrol_playerPlayFile_3 "Play File" (gKodi_3) { channel="kodi:kodi:kodi_3:playuri" }
+Switch kodi_kodicontrol_playerStop_3 "Stop" (gKodi_3) { channel="kodi:kodi:kodi_3:stop" }
+

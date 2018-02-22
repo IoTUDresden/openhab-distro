@@ -1,0 +1,76 @@
+
+Group gHomematic "Homematic"
+Group gDimmer "Dimmer" (gHomematic)
+Group gGong "Gong" (gHomematic)
+Group gMotion "Motion Detector" (gHomematic)
+Group gWindow "Window Contact" (gHomematic)
+Group gKey "Keymatic" (gHomematic)
+Group gCO2 "CO2" (gHomematic)
+Group gPresence "Presence" (gHomematic)
+
+
+/* Dimmer 1 */
+Dimmer homematic_dimmer_dimmer_1 "Dimmer [%d %%]" (gDimmer) { channel="homematic:HM-LC-Dim1T-Pl-2:ccu:JEQ0193817:1#LEVEL" }
+
+/* Dimmer 2 */
+Dimmer homematic_dimmer_dimmer_2 "Dimmer 2 [%d %%]" (gDimmer) { channel="homematic:HM-LC-Dim1L-Pl-2:ccu:JEQ0567833:1#LEVEL" }
+
+/*Klingel 1 */
+Switch homematic_gong_lightGong_1 "Light" (gGong) { channel="homematic:HM-OU-CF-Pl:ccu:JEQ0129257:1#STATE" }
+Switch homematic_gong_gong_1 "Sound" (gGong) { channel="homematic:HM-OU-CF-Pl:ccu:JEQ0129257:2#STATE" }
+
+/* Motion Detector */
+Number homematic_motionIndicator_brightness_1 "brightness [%d]" (gMotion) { channel="homematic:HM-Sec-MDIR:ccu:JEQ0266367:1#BRIGHTNESS" }
+Switch homematic_motionIndicator_motionIndicator_1 "motion" (gMotion) { channel="homematic:HM-Sec-MDIR:ccu:JEQ0266367:1#MOTION" }
+
+
+/* Window Contact 1*/
+String Bath_Window "Window 1 [%s]" (gWindow) { channel="homematic:HM-Sec-RHS:ccu:JEQ0712908:1#STATE" }
+
+/* Door */
+Switch homematic_keymatic_keymatic_1 			"Lock [map(HM-Sec-Key-S.map):%s]" <lock> 	(gKey) { channel="homematic:HM-Sec-Key:ccu:JEQ0710776:1#STATE" }
+Switch Keymatic_Open_1 		"Open" 	<door>	(gKey)  { channel="homematic:HM-Sec-Key:ccu:JEQ0710776:1#OPEN" }
+
+/* C02 Sensor*/
+String homematic_co2_co2_1 "CO2 content [map(HM-CC-SCD.map):%s]" (gCO2) { channel="homematic:HM-CC-SCD:ccu:HEQ0083942:1#STATE" }
+
+/* Presence */
+Switch homematic_presence_detectionActive_1             "Active"                 (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#PRESENCE_DETECTION_ACTIVE" }
+Switch homematic_presence_resetPresence_1               "Reset"                  (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#RESET_PRESENCE" }
+Switch homematic_presence_presenceDetectionState_1      "State"                  (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#PRESENCE_DETECTION_STATE" }
+Number homematic_presence_illumination_1                "Illumination [%s]"           (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#ILLUMINATION" }
+Number homematic_presence_currentIllumination_1         "Current Illumination [%s]"   (gPresence){ channel="homematic:HmIP-SPI:ccu:000C17099A0401:1#CURRENT_ILLUMINATION" }
+
+
+
+/*
+HM-LC-Dim1T-Pl-2 JEQ0193817:1
+{ channel="homematic:HM-LC-Dim1T-Pl-2:ccu:JEQ0193817:1#LEVEL" }
+
+HM-OU-CF-Pl JEQ0129257:1
+{ channel="homematic:HM-OU-CF-Pl:ccu:JEQ0129257:1#STATE" }
+
+HM-OU-CF-Pl JEQ0129257:2
+{ channel="homematic:HM-OU-CF-Pl:ccu:JEQ0129257:2#STATE" }
+
+HM-Sec-MDIR JEQ0266367:1
+{ channel="homematic:HM-Sec-MDIR:ccu:JEQ0266367:1#BRIGHTNESS" }
+
+HM-Sec-MDIR JEQ0266367:2
+{ channel="homematic:HM-Sec-MDIR:ccu:JEQ0266367:1#MOTION" }
+
+HM-LC-Dim1L-Pl-2 JEQ0567833:1
+{ channel="homematic:HM-LC-Dim1L-Pl-2:ccu:JEQ0567833:1#LEVEL" }
+
+HM-Sec-RHS JEQ0712908:1
+{ channel="homematic:HM-Sec-RHS:ccu:JEQ0712908:1#STATE" }
+
+HM-Sec-Key JEQ0710776:1
+{ channel="homematic:HM-Sec-Key:ccu:JEQ0710776:1#STATE" }
+{ channel="homematic:HM-Sec-Key:ccu:JEQ0710776:1#OPEN" }
+{ homematic="address=JEQ0710776, forceUpdate=true, channel=1, parameter=OPEN", autoUpdate="false" }
+
+HM-CC-SCD HEQ0083942:1
+{ channel="homematic:HM-CC-SCD:ccu:HEQ0083942:1#STATE" }
+
+*/
