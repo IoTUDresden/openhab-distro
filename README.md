@@ -3,7 +3,8 @@
 
 - get the eclipse installer
 - start installer and go to advanced mode and choose Eclipse Java IDE
-- copy the setup file from https://raw.githubusercontent.com/IoTUDresden/openhab-distro/synced/launch/openHAB2.setup
+- copy the setup file from https://raw.githubusercontent.com/IoTUDresden/openhab-distro/master/launch/openHAB2.setup
+   - if you want to use the older 2.2.x Version, get the setup file from https://raw.githubusercontent.com/IoTUDresden/openhab-distro/2.2.x/launch/openHAB2.setup
 - copy paste the setup file to the projects page and select openHAB (openHAB Dev and openHAB 2 addons)
 
 # See the following publications for more detail:
